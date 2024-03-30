@@ -1,0 +1,12 @@
+node_modules
+
+*dist
+
+*cache
+
+/docs/economy
+
+/docs/practice
+
+/docs/thought
+
