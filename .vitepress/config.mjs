@@ -8,6 +8,7 @@ export default defineConfig({
   description: "A VitePress Site",
   srcDir: "docs",
   themeConfig: {
+    logo: "/logo.jpg",
     outlineTitle: "目录",
     outline: [2, 4],
     // https://vitepress.dev/reference/default-theme-config

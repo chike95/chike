@@ -15,10 +15,10 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
+  - title: 软件与硬件相互关联
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+  - title: 思考与实践相互促进
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - title: 工作与学习相互结合
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---

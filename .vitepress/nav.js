@@ -1,6 +1,6 @@
 export default [
   {
-    text: "哲学",
+    text: "哲思",
     items: [
       {
         text: "古典",
@@ -16,6 +16,7 @@ export default [
           { text: "黑格尔", link: "/language/japanese" },
         ],
       },
+      { text: "世界观", link: "/world/" },
     ],
   },
   {
@@ -41,12 +42,21 @@ export default [
     text: "经济",
     items: [
       {
-        text: "宏观经济",
-        items: [{ text: "《庄子》", link: "/macro/macro/" }],
+        text: "理论",
+        items: [{ text: "宏观经济", link: "/economy/macro/" }],
       },
       {
-        text: "投资理财",
+        text: "投资",
         items: [{ text: "股票", link: "/economy/stock/" }],
+      },
+      {
+        text: "图书",
+        items: [
+          {
+            text: "《两次全球大危机的比较研究》",
+            link: "/economy/book/两次全球大危机的比较研究/",
+          },
+        ],
       },
     ],
   },
