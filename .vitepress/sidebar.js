@@ -25,7 +25,16 @@ export default {
     {
       text: "实践·真途",
       //   collapsed: true,
-      items: [{ text: "需求分析", link: "/practice/zhenpath/requirement.md" }],
+      items: [
+        { text: "混沌领域", link: "/practice/zhenpath/chaos.md" },
+        { text: "需求分析", link: "/practice/zhenpath/requirement.md" },
+        { text: "社区管理", link: "/practice/zhenpath/manage.md" },
+      ],
+    },
+    {
+      text: "互联网分析",
+      //   collapsed: true,
+      items: [{ text: "web发展", link: "/practice/zhenpath/web.md" }],
     },
   ],
   "/economy/macro/": [
