@@ -34,7 +34,10 @@ export default {
     {
       text: "互联网分析",
       //   collapsed: true,
-      items: [{ text: "web发展", link: "/practice/zhenpath/web.md" }],
+      items: [
+        { text: "web发展", link: "/practice/zhenpath/web.md" },
+        { text: "研究内容", link: "/practice/zhenpath/study.md" },
+      ],
     },
   ],
   "/economy/macro/": [
