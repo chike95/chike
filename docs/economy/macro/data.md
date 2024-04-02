@@ -8,4 +8,4 @@
 
 ## 4 经济统计数据到经济模型
 
-![alt text](./img/宏观经济指标.png)
+![alt text](./img/宏观经济指标.jpg)
