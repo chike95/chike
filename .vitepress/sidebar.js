@@ -3,9 +3,7 @@ export default {
     {
       // text: "TypeScript",
       // collapsed: true,
-      items: [
-        { text: "TypeScript", link: "/FE/typescript/" },
-      ],
+      items: [{ text: "TypeScript", link: "/FE/typescript/" }],
     },
   ],
 
@@ -13,9 +11,7 @@ export default {
     {
       text: "Linux",
       // collapsed: true,
-      items: [
-        { text: "ssh", link: "/RD/linux/ssh" },
-      ],
+      items: [{ text: "ssh", link: "/RD/linux/ssh" }],
     },
   ],
 
@@ -23,9 +19,7 @@ export default {
     {
       text: "node",
       // collapsed: true,
-      items: [
-        { text: "nestjs", link: "/RD/node/nest/" },
-      ],
+      items: [{ text: "nestjs", link: "/RD/node/nest/" }],
     },
   ],
 
@@ -45,14 +39,14 @@ export default {
         { text: "彼: 吾思之源，吾思之形", link: "/thought/world/" },
         { text: "道", link: "/thought/world/dao.md" },
       ],
-    }
+    },
   ],
 
   "/work/logs/": [
     { text: "泰康", link: "/work/logs/taikang/240325" },
     { text: "滨州体育中心", link: "/work/logs/binzhou/240402" },
     { text: "宝武裂缝监测", link: "/work/logs/baowu/240325" },
-    { text: '海南三亚游泳馆', link: "/work/logs/hainan/natatorium" },
+    { text: "海南三亚游泳馆", link: "/work/logs/hainan/natatorium" },
     { text: "vivo 全球 AI 研发中心", link: "/work/logs/vivo/240325" },
   ],
 
@@ -69,6 +63,7 @@ export default {
 
   "/thought/world/": [
     {
+      text: "《道学》",
       //   collapsed: true,
       items: [
         { text: "彼: 吾思之源，吾思之形", link: "/thought/world/" },
