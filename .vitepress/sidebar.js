@@ -17,27 +17,125 @@ export default {
 
   "/RD/node/": [
     {
-      text: "node",
-      // collapsed: true,
-      items: [{ text: "nestjs", link: "/RD/node/nest/" }],
+      text: "node 核心",
+      collapsed: false,
+      items: [
+        { text: "安装配置", link: "/RD/node/core/config" },
+        { text: "FS", link: "/RD/node/core/fs" },
+        { text: "HTTP", link: "/RD/node/core/http" },
+        { text: "TCP", link: "/RD/node/core/tcp" },
+      ],
+    },
+    {
+      text: "常用库",
+      collapsed: false,
+      items: [
+        {
+          text: "sequelize",
+          link: "/RD/node/library/sequelize/",
+          items: [
+            { text: "快速上手", link: "/RD/node/library/sequelize/01" },
+            { text: "模型", link: "/RD/node/library/sequelize/02" },
+          ],
+        },
+        { text: "nodemailer", link: "/RD/node/library/nodemailer/" },
+        { text: "modbus-serial", link: "/RD/node/library/modbus-serial/" },
+      ],
+    },
+    {
+      text: "Express",
+      collapsed: true,
+      items: [
+        { text: "快速入门", link: "/RD/node/express/" },
+        { text: "modbus-serial", link: "/RD/node/library/modbus-serial/" },
+      ],
+    },
+    {
+      text: "Koa",
+      collapsed: true,
+      items: [
+        { text: "快速入门", link: "/RD/node/koa/" },
+        { text: "modbus-serial", link: "/RD/node/library/modbus-serial/" },
+      ],
+    },
+    {
+      text: "nestJS",
+      collapsed: true,
+      items: [
+        { text: "nodemailer", link: "/RD/node/library/nodemailer/" },
+        { text: "modbus-serial", link: "/RD/node/library/modbus-serial/" },
+      ],
+    },
+    {
+      text: "实战项目: nestJS 小慕图书",
+      collapsed: false,
+      items: [
+        { text: "一、项目分析", link: "/RD/node/nest/book-admin/01" },
+        { text: "二、项目搭建", link: "/RD/node/nest/book-admin/02" },
+        { text: "三、登录模块", link: "/RD/node/nest/book-admin/03" },
+        { text: "四、前端权限", link: "/RD/node/nest/book-admin/04" },
+        { text: "五、图书功能", link: "/RD/node/nest/book-admin/05" },
+      ],
     },
   ],
 
   "/work/ysb/": [
     {
-      text: "电式",
+      text: "分类：电式",
       // collapsed: true,
       items: [
-        { text: "彼: 吾思之源，吾思之形", link: "/thought/world/" },
+        { text: "电式", link: "/work/ysb/electricity/" },
         { text: "道", link: "/thought/world/dao.md" },
       ],
     },
     {
-      text: "振弦式",
+      text: "分类：振弦式",
       //   collapsed: true,
       items: [
-        { text: "彼: 吾思之源，吾思之形", link: "/thought/world/" },
-        { text: "道", link: "/thought/world/dao.md" },
+        { text: "振弦", link: "/work/ysb/vibratingWire/" },
+        { text: "传感器", link: "/work/ysb/vibratingWire/01-sensor" },
+        { text: "采集仪", link: "/work/ysb/vibratingWire/02-instrument" },
+        { text: "程序开发", link: "/work/ysb/vibratingWire/03-software" },
+      ],
+    },
+  ],
+
+  "/work/youren/": [
+    { text: "USR-TCP232-306 产品记录", link: "/work/youren/USR-TCP232-306/" },
+    {
+      text: "USR-TCP232-306 网页配置",
+      link: "/work/youren/USR-TCP232-306/485",
+    },
+  ],
+
+  "/work/devices/": [
+    { text: "大华摄像头", link: "/work/devices/dahua/camera" },
+    { text: "ZH-T08R-14N1", link: "/work/devices/ZH-T08R-14N1/strain-8R" },
+    { text: "蒲公英R300路由器", link: "/work/devices/oray/R300" },
+  ],
+
+  "/work/software/": [
+    {
+      text: "程序分析",
+      collapsed: false,
+      items: [
+        { text: "通用函数", link: "/work/software/common" },
+        { text: "昆山应变倾角", link: "/work/software/231104-kunshan" },
+      ],
+    },
+    {
+      text: "项目部署",
+      collapsed: false,
+      items: [
+        { text: "windows", link: "/work/software/windows_env" },
+        {
+          text: "ubuntu",
+          items: [
+            { text: "系统安装", link: "/work/software/ubuntu/01_system" },
+            { text: "环境搭建", link: "/work/software/ubuntu/02_dev" },
+            { text: "程序部署", link: "/work/software/ubuntu/03_config" },
+          ],
+        },
       ],
     },
   ],
@@ -48,17 +146,6 @@ export default {
     { text: "宝武裂缝监测", link: "/work/logs/baowu/240325" },
     { text: "海南三亚游泳馆", link: "/work/logs/hainan/natatorium" },
     { text: "vivo 全球 AI 研发中心", link: "/work/logs/vivo/240325" },
-  ],
-
-  "/work/software/": [
-    {
-      text: "程序分析",
-      // collapsed: true,
-      items: [
-        { text: "通用函数", link: "/work/software/common" },
-        { text: "昆山应变倾角", link: "/work/software/231104-kunshan" },
-      ],
-    },
   ],
 
   "/thought/world/": [
@@ -132,6 +219,45 @@ export default {
     },
   ],
   "/economy/stock/": [
-    { items: [{ text: "混沌领域", link: "/economy/stock/0.md" }] },
+    {
+      text: "趋势投资",
+      collapsed: false,
+      items: [
+        { text: "理论基础", link: "/economy/stock/trend/theory" },
+        { text: "趋势投资的概念", link: "/economy/stock/trend/concept" },
+      ],
+    },
+    {
+      text: "探索：币圈趋势交易的研究",
+      collapsed: false,
+      items: [
+        { text: "研究介绍", link: "/economy/stock/bitcion/" },
+        { text: "交易系统", link: "/economy/stock/bitcion/system" },
+      ],
+    },
+    {
+      text: "实战：构建A股趋势交易系统",
+      collapsed: false,
+      items: [
+        { text: "项目介绍", link: "/economy/stock/market/" },
+        { text: "均线系统", link: "/economy/stock/market/average" },
+      ],
+    },
+  ],
+  "/economy/news/": [
+    {
+      text: "《2024年经济要闻》",
+      //   collapsed: true,
+      items: [
+        { text: "1月", link: "/economy/news/2024/01" },
+        { text: "3月", link: "/economy/news/2024/03" },
+        { text: "4月", link: "/economy/news/2024/04" },
+      ],
+    },
+    {
+      text: "《专题要闻》",
+      //   collapsed: true,
+      items: [{ text: "俄乌战争", link: "/economy/news/2024/01" }],
+    },
   ],
 };

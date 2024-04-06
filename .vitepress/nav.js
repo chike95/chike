@@ -37,7 +37,6 @@ export default [
       { text: "Node", link: "/RD/node/" },
       { text: "Java", link: "/RD/java/" },
       { text: "Spring", link: "/RD/spring/" },
-      { text: "Linux", link: "/RD/linux/" },
       { text: "工具", link: "/RD/tools/" },
       { text: "常见需求", link: "/RD/business/" },
       {
@@ -109,7 +108,10 @@ export default [
       },
       {
         text: "投资",
-        items: [{ text: "股票", link: "/economy/stock/" }],
+        items: [
+          { text: "股票", link: "/economy/stock/" },
+          { text: "新闻", link: "/economy/news/" },
+        ],
       },
       {
         text: "图书",

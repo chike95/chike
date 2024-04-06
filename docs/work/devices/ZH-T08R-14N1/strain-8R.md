@@ -78,9 +78,12 @@ function read() {
 
 #### 数据返回：
 
+```
+
 { address: 80, value: 1 }
 
 { data: [ 1 ], buffer: <Buffer 00 01> }
+```
 
 #### 存在的问题：
 
