@@ -1,6 +1,8 @@
 import { defineConfig } from "vitepress";
 import nav from "./nav";
 import sidebar from "./sidebar";
+import mdItCustomAttrs from 'markdown-it-custom-attrs'
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -20,4 +22,21 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
     ],
   },
+
+  markdown: {
+    config: (md) => {
+      // use more markdown-it plugins!
+      md.use(mdItCustomAttrs, 'image', {
+        'data-fancybox': "gallery"
+      })
+    }
+  },
+  head: [
+    [
+      "link",
+      { rel: "stylesheet", href: "/css/fancybox.css" },
+      // { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" },
+    ],
+    ["script", { src: "/js/fancybox.umd.js" }],
+  ]
 });

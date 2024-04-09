@@ -16,7 +16,7 @@ export default [
         items: [
           { text: "HTML", link: "/FE/HTML/" },
           { text: "CSS", link: "/FE/CSS/" },
-          { text: "JS", link: "/FE/JS/" },
+          { text: "JavaScript", link: "/FE/JS/" },
           { text: "TypeScript", link: "/FE/typescript/" },
         ],
       },
@@ -27,6 +27,13 @@ export default [
           { text: "vitepress", link: "/FE/vitepress/" },
           { text: "WEB_3D", link: "/FE/WEB_3D/" },
           { text: "相关技术", link: "/FE/others/" },
+        ],
+      },
+      {
+        text: "开发工具",
+        items: [
+          { text: "VSCode", link: "/FE/tools/vscode/" },
+          { text: "Postmon", link: "/FE/vitepress/" },
         ],
       },
     ],
@@ -40,11 +47,11 @@ export default [
       { text: "工具", link: "/RD/tools/" },
       { text: "常见需求", link: "/RD/business/" },
       {
-        text: "系统运维",
+        text: "操作系统",
         items: [
-          { text: "计算机网络", link: "/RD/com/" },
           { text: "Linux", link: "/RD/linux/" },
           { text: "Windows", link: "/RD/windows/" },
+          { text: "计算机网络", link: "/RD/net/" },
         ],
       },
     ],

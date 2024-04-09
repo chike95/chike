@@ -1,4 +1,65 @@
 export default {
+
+  "/EE/comm/": [
+    {
+      text: "通信",
+      // collapsed: true,
+      items: [
+        { text: "modbus", link: "/EE/comm/modbus/" },
+        { text: "RS485", link: "/EE/comm/rs485/" }],
+    },
+    {
+      text: "原理",
+      // collapsed: true,
+      items: [
+        { text: "TypeScript", link: "/FE/typescript/" },
+        { text: "TypeScript", link: "/FE/typescript/" },
+      ],
+    },
+  ],
+
+  "/EE/components/": [
+    {
+      text: "元件",
+      // collapsed: true,
+      items: [{ text: "TypeScript", link: "/FE/typescript/" }],
+    },
+    {
+      text: "器件",
+      // collapsed: true,
+      items: [
+        { text: "dht11", link: "/EE/components/dht11/" },
+        { text: "oled", link: "/EE/components/oled/" },
+      ],
+    },
+  ],
+
+  "/EE/DB/": [
+    {
+      text: "ESP8266",
+      // collapsed: true,
+      items: [{ text: "TypeScript", link: "/FE/typescript/" }],
+    },
+    {
+      text: "STM32F103",
+      // collapsed: true,
+      items: [{ text: "STM32F103", link: "/EE/dev/" }],
+    },
+  ],
+
+  "/EE/dev/": [
+    {
+      text: "Keil",
+      // collapsed: true,
+      items: [{ text: "基础知识", link: "/EE/dev/keil/" }],
+    },
+    {
+      text: "Arduino",
+      // collapsed: true,
+      items: [{ text: "基础知识", link: "/EE/dev/arduino/" }],
+    },
+  ],
+
   "/FE/typescript/": [
     {
       // text: "TypeScript",
@@ -9,9 +70,14 @@ export default {
 
   "/RD/linux/": [
     {
-      text: "Linux",
+      text: "基础知识",
       // collapsed: true,
       items: [{ text: "ssh", link: "/RD/linux/ssh" }],
+    },
+    {
+      text: "软件",
+      collapsed: false,
+      items: [{ text: "onboard", link: "/RD/linux/software/onboard/" }],
     },
   ],
 
@@ -59,11 +125,11 @@ export default {
       ],
     },
     {
-      text: "nestJS",
-      collapsed: true,
+      text: "NestJS",
+      collapsed: false,
       items: [
-        { text: "nodemailer", link: "/RD/node/library/nodemailer/" },
-        { text: "modbus-serial", link: "/RD/node/library/modbus-serial/" },
+        { text: "快速入门", link: "/RD/node/nest/" },
+        { text: "CLI", link: "/RD/node/nest/cli" },
       ],
     },
     {
@@ -81,16 +147,8 @@ export default {
 
   "/work/ysb/": [
     {
-      text: "分类：电式",
-      // collapsed: true,
-      items: [
-        { text: "电式", link: "/work/ysb/electricity/" },
-        { text: "道", link: "/thought/world/dao.md" },
-      ],
-    },
-    {
       text: "分类：振弦式",
-      //   collapsed: true,
+      collapsed: false,
       items: [
         { text: "振弦", link: "/work/ysb/vibratingWire/" },
         { text: "传感器", link: "/work/ysb/vibratingWire/01-sensor" },
@@ -98,12 +156,24 @@ export default {
         { text: "程序开发", link: "/work/ysb/vibratingWire/03-software" },
       ],
     },
+    {
+      text: "分类：电式",
+      collapsed: false,
+      items: [
+
+        { text: "地震仪", link: "/work/ysb/seismometer/" },
+        { text: "485 倾角仪", link: "/work/ysb/485inclinometer/" },
+        { text: "电压型水准仪", link: "/work/ysb/level/" },
+        { text: "电流型水准仪", link: "/work/ysb/level/level-i" },
+      ],
+    },
+
   ],
 
   "/work/youren/": [
     { text: "USR-TCP232-306 产品记录", link: "/work/youren/USR-TCP232-306/" },
     {
-      text: "USR-TCP232-306 网页配置",
+      text: "USR-TCP232-306 配置软件",
       link: "/work/youren/USR-TCP232-306/485",
     },
   ],
@@ -121,6 +191,22 @@ export default {
       items: [
         { text: "通用函数", link: "/work/software/common" },
         { text: "昆山应变倾角", link: "/work/software/231104-kunshan" },
+      ],
+    },
+    {
+      text: "shmcom",
+      collapsed: false,
+      items: [
+        { text: "tcp服务", link: "/work/software/common" },
+        { text: "系统采集", link: "/work/software/231104-kunshan" },
+      ],
+    },
+    {
+      text: "xiot",
+      collapsed: false,
+      items: [
+        { text: "xiot系统", link: "/work/software/xiot/" },
+        { text: "initServer", link: "/work/software/xiot/initServer" },
       ],
     },
     {

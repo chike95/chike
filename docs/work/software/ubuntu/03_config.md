@@ -4,8 +4,6 @@
 
 ### 3.1.1 配置修改
 
-
-
 ## 3.2 数据库
 
 ## 3.3 开机自启
@@ -16,17 +14,19 @@
 
 <https://xugaoxiang.com/2019/12/05/systemd-rc-local-on-boot/>
 
-### 3.3.1 建立rc-local.service
+### 3.3.1 建立 rc-local.service
+
 ```
 sudo vim /etc/systemd/system/rc-local.service
 ```
 
-将下列内容复制进rc-local.service文件
+将下列内容复制进 rc-local.service 文件
+
 ```
 [Unit]
 Description=/etc/rc.local Compatibility
 ConditionPathExists=/etc/rc.local
- 
+
 [Service]
 Type=forking
 ExecStart=/etc/rc.local start
@@ -34,16 +34,18 @@ TimeoutSec=0
 StandardOutput=tty
 RemainAfterExit=yes
 SysVStartPriority=99
- 
+
 [Install]
 WantedBy=multi-user.target
 ```
-### 3.3.2 创建rc.local
+
+### 3.3.2 创建 rc.local
+
 ```
 sudo vim /etc/rc.local
 ```
 
-下列内容复制进rc.local文件
+下列内容复制进 rc.local 文件
 
 tomcat 项目配置
 
@@ -85,8 +87,8 @@ exit 0
     将重启信息和日志记录到 /srv/project/donganhu/restart.log 文件中。
     最后，脚本退出。
 
-
 springboot 项目配置
+
 ```
 #!/bin/sh -e
 #
@@ -115,7 +117,6 @@ echo 'tl-twg jar restarted!' >> /srv/project/restart.log
 exit 0
 ```
 
-
 这段脚本也是一个启动脚本，和之前的脚本类似，它执行以下操作：
 
     获取当前时间并将其保存到变量 time 中。
@@ -124,4 +125,3 @@ exit 0
     切换到 /srv/project/ 目录，并执行名为 start.sh 的脚本。
     将重启信息和日志记录到 /srv/project/restart.log 文件中。
     最后，脚本退出。
-

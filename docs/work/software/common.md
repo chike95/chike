@@ -103,24 +103,39 @@ function net() {
 
 ### net() 函数
 
-net() 函数定义了一个名为 net 的模块，该模块包含了一系列函数和变量，并最终返回一个包含这些函数和变量的对象 obj。
+::: info net()
+
+定义了一个名为 net 的模块，该模块包含了一系列函数和变量，并最终返回一个包含这些函数和变量的对象 obj。
 
 在 net 模块中，首先声明了一个空对象 obj，用于存放后续定义的函数和变量。
+:::
 
 ### openSocketServer
 
-openSocketServer() 函数用于创建并开启一个 TCP 服务器。该函数接受三个可选参数：回调函数 hdl、服务器主机地址 host 和端口号 port。如果未提供参数，则会使用默认值。在该函数内部，通过调用 require("net").Server() 创建了一个 TCP 服务器实例 socketServer，并通过 socketServer.on() 方法监听了服务器的 error 事件和 connection 事件。当有客户端连接到服务器时，会触发 connection 事件，并执行相应的回调函数。回调函数中处理了客户端连接的各种事件，包括 error、close、end 和 data 事件，并调用传入的 hdl 函数处理接收到的数据。
+::: info openSocketServer()
+函数用于创建并开启一个 TCP 服务器。该函数接受三个可选参数：回调函数 hdl、服务器主机地址 host 和端口号 port。如果未提供参数，则会使用默认值。
+
+在该函数内部，通过调用 require("net").Server() 创建了一个 TCP 服务器实例 socketServer，并通过 socketServer.on() 方法监听了服务器的 error 事件和 connection 事件。
+
+当有客户端连接到服务器时，会触发 connection 事件，并执行相应的回调函数。回调函数中处理了客户端连接的各种事件，包括 error、close、end 和 data 事件，并调用传入的 hdl 函数处理接收到的数据。
+:::
 
 ### closeSocketServer
 
-closeSocketServer() 函数用于关闭 TCP 服务器。它接受一个可选参数 srv，默认值为 socketServer，即要关闭的服务器实例。在函数内部，通过调用服务器实例的 close() 方法关闭服务器，并关闭所有已连接的客户端。
+::: info closeSocketServer()
+用于关闭 TCP 服务器。它接受一个可选参数 srv，默认值为 socketServer，即要关闭的服务器实例。在函数内部，通过调用服务器实例的 close() 方法关闭服务器，并关闭所有已连接的客户端。
+:::
 
 ### closeClient
 
-closeClient() 函数用于关闭指定的客户端连接。它接受一个参数 cltNo，表示要关闭的客户端连接的编号。在函数内部，通过调用客户端连接的 end() 和 destroy() 方法关闭客户端连接。
+::: info closeClient()
+函数用于关闭指定的客户端连接。它接受一个参数 cltNo，表示要关闭的客户端连接的编号。在函数内部，通过调用客户端连接的 end() 和 destroy() 方法关闭客户端连接。
+:::
 
 ### writeClient
 
-writeClient() 函数用于向指定的客户端发送数据。它接受两个参数：要发送的数据 buf 和目标客户端的编号 cltNo。在函数内部，通过调用目标客户端的 write() 方法发送数据。
+::: info writeClient()
+函数用于向指定的客户端发送数据。它接受两个参数：要发送的数据 buf 和目标客户端的编号 cltNo。在函数内部，通过调用目标客户端的 write() 方法发送数据。
 
 在函数的最后，返回了包含所有定义的函数和变量的对象 obj，作为模块的导出。
+:::
