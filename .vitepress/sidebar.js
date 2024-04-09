@@ -1,12 +1,12 @@
 export default {
-
   "/EE/comm/": [
     {
       text: "通信",
       // collapsed: true,
       items: [
         { text: "modbus", link: "/EE/comm/modbus/" },
-        { text: "RS485", link: "/EE/comm/rs485/" }],
+        { text: "RS485", link: "/EE/comm/rs485/" },
+      ],
     },
     {
       text: "原理",
@@ -134,13 +134,24 @@ export default {
     },
     {
       text: "实战项目: nestJS 小慕图书",
-      collapsed: false,
+      collapsed: true,
       items: [
         { text: "一、项目分析", link: "/RD/node/nest/book-admin/01" },
         { text: "二、项目搭建", link: "/RD/node/nest/book-admin/02" },
         { text: "三、登录模块", link: "/RD/node/nest/book-admin/03" },
         { text: "四、前端权限", link: "/RD/node/nest/book-admin/04" },
         { text: "五、图书功能", link: "/RD/node/nest/book-admin/05" },
+      ],
+    },
+    {
+      text: "测试代码",
+      collapsed: false,
+      items: [
+        {
+          text: "获取 JSON 格式中的字幕内容",
+          link: "/RD/node/test/getSubtitle/",
+        },
+        { text: "二、项目搭建", link: "/RD/node/nest/book-admin/02" },
       ],
     },
   ],
@@ -160,14 +171,12 @@ export default {
       text: "分类：电式",
       collapsed: false,
       items: [
-
         { text: "地震仪", link: "/work/ysb/seismometer/" },
         { text: "485 倾角仪", link: "/work/ysb/485inclinometer/" },
         { text: "电压型水准仪", link: "/work/ysb/level/" },
         { text: "电流型水准仪", link: "/work/ysb/level/level-i" },
       ],
     },
-
   ],
 
   "/work/youren/": [
@@ -303,7 +312,24 @@ export default {
         { text: "宏观经济学的数据指标", link: "/economy/macro/data.md" },
       ],
     },
+    {
+      text: "经济形势",
+      collapsed: false,
+      items: [
+        { text: "当前形势", link: "/economy/macro/situation/" },
+        { text: "混沌领域", link: "/economy/macro/chaos.md" },
+      ],
+    },
+    {
+      text: "主题研究",
+      collapsed: false,
+      items: [
+        { text: "日本加息", link: "/economy/macro/situation/Japan/interest" },
+        { text: "混沌领域", link: "/economy/macro/chaos.md" },
+      ],
+    },
   ],
+
   "/economy/stock/": [
     {
       text: "趋势投资",
