@@ -324,8 +324,53 @@ export default {
       text: "主题研究",
       collapsed: false,
       items: [
-        { text: "日本加息", link: "/economy/macro/situation/Japan/interest" },
-        { text: "混沌领域", link: "/economy/macro/chaos.md" },
+        { text: "经济危机", link: "/economy/macro/crisis/" },
+        { text: "日本加息", link: "/economy/macro/situation/Japan/240319" },
+      ],
+    },
+    {
+      text: "主要经济体",
+      collapsed: false,
+      items: [
+        { text: "美国", link: "/economy/macro/situation/Japan/240319" },
+        { text: "中国", link: "/economy/macro/chaos.md" },
+        { text: "日本", link: "/economy/macro/situation/Japan/" },
+        { text: "德国", link: "/economy/macro/chaos.md" },
+        { text: "印度", link: "/economy/macro/chaos.md" },
+      ],
+    },
+  ],
+  "/economy/macro/crisis/": [
+    {
+      text: "《关于经济危机的研究》",
+      items: [
+        {
+          text: "基础知识",
+          link: "/economy/macro/crisis/2022/",
+        },
+        { text: "趋势投资的概念", link: "/economy/stock/trend/concept" },
+      ],
+    },
+    {
+      text: "本轮经济危机",
+      items: [
+        {
+          text: "2022",
+          link: "/economy/macro/crisis/2022/",
+        },
+        { text: "趋势投资的概念", link: "/economy/stock/trend/concept" },
+      ],
+    },
+  ],
+  "/economy/macro/situation/Japan/": [
+    {
+      text: "《日本宏观经济研究》",
+      items: [
+        {
+          text: "240319：日元加息",
+          link: "/economy/macro/situation/Japan/240319",
+        },
+        { text: "趋势投资的概念", link: "/economy/stock/trend/concept" },
       ],
     },
   ],
