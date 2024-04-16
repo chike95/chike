@@ -180,6 +180,7 @@ export default {
   ],
 
   "/work/youren/": [
+    { text: "LG206", link: "/work/youren/LG206/" },
     { text: "USR-TCP232-306 产品记录", link: "/work/youren/USR-TCP232-306/" },
     {
       text: "USR-TCP232-306 配置软件",
@@ -236,6 +237,8 @@ export default {
   ],
 
   "/work/logs/": [
+    { text: "端口分配", link: "/work/logs/port" },
+    { text: "新天地", link: "/work/logs/xintiandi/" },
     { text: "泰康", link: "/work/logs/taikang/240325" },
     { text: "滨州体育中心", link: "/work/logs/binzhou/240402" },
     { text: "宝武裂缝监测", link: "/work/logs/baowu/240325" },

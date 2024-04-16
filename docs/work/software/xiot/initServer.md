@@ -76,7 +76,7 @@ doSend 方法：
 - 该方法的具体功能未在注释中描述，但根据方法名和参数推测，可能是用于发送数据的方法。
   :::
 
-### 启动
+## 启动
 
 ```java
     @Override
@@ -210,3 +210,62 @@ doSend 方法：
     }
 
 ```
+
+## CnnNode
+
+### 初始化
+
+```java
+public Socket cnnSkt = null;
+public String scPorts = null;
+public HashMap<String, String[]> subs; // String[]={设备类,采样间隔(分钟1,2,5,10,30,60),其他}
+private boolean runFlg; // 工作属性
+```
+
+这个类有以下成员变量：
+
+- cnnSkt：表示一个 Socket 对象，用于与其他节点建立连接。
+- scPorts：表示一个字符串，可能用于保存节点的端口信息。
+- subs：表示一个 HashMap，用于存储订阅信息。键是设备类别，值是一个字符串数组，数组中包含采样间隔和其他相关信息。
+- runFlg：表示线程是否应该继续运行的标志。默认值为 true。
+
+```java
+public CnnNode() { subs = new HashMap<String, String[]>(); runFlg = true; }
+public void over() { runFlg = false; } // 终止运行
+```
+
+- CnnNode() 构造函数：初始化 subs 和 runFlg。
+- over() 方法：用于设置 runFlg 为 false，以便终止运行该线程。
+
+### run() 方法
+
+#### 整体分析
+
+- run() 方法是一个实现了 Runnable 接口的线程运行方法，用于在单独的线程中执行任务。
+- 方法中有一个 while 循环，只要 runFlg 为真，就会一直运行。
+- 在循环中，首先通过 Thread.sleep() 方法等待下一分钟开始，确保每分钟执行一次。
+- 然后检查 cnnSkt 是否可用，获取输入输出流。
+- 遍历一个名为 subs 的映射，其中键是设备地址字符串，值是设备设置。
+- 对每个设备设置进行处理，获取设备地址、指令、数据等信息。
+- 构造读取数据的指令并发送到设备。
+- 接收设备返回的数据，并保存或处理。
+
+#### 变量
+
+```java
+OutputStream os;
+InputStream is;
+long ms = Mms;
+String[] strs, addrs, cmds, datas;
+byte[] cmd, buf = new byte[BufLen];
+int num, addrStart, addrLen, cmdStart, crcHandleStart, crcHandleLen;
+```
+
+声明了一系列变量，用于在后续的通信过程中使用：
+
+- OutputStream os;：用于向设备发送数据的输出流。
+- InputStream is;：用于从设备接收数据的输入流。
+- long ms = Mms;：表示时间间隔的长整型变量，初始值设定为 Mms。这里可能是一个时间间隔的设定，用于控制设备通信的频率。
+- String[] strs, addrs, cmds, datas;：分别用于存储设备设置、设备地址、指令、数据等字符串数组。
+- byte[] cmd, buf = new byte[BufLen];：cmd 用于存储构造的指令，buf 用于存储接收到的数据。buf 被初始化为长度为 BufLen 的字节数组。
+- int num, addrStart, addrLen, cmdStart, crcHandleStart, crcHandleLen;：整型变量，分别用于记录数据数量、地址起始位置、地址长度、指令起始位置、CRC 处理起始位置和长度。

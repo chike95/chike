@@ -45,6 +45,9 @@ WantedBy=multi-user.target
 sudo vim /etc/rc.local
 ```
 
+::: warning 注意,否则启东会报错
+确保该文件中包含有效的 shell 命令，并且没有语法错误。特别是，检查文件是否以 #!/bin/sh -e 开头，这是推荐的 shebang，用于确保脚本在遇到错误时停止执行。
+:::
 下列内容复制进 rc.local 文件
 
 tomcat 项目配置
@@ -79,13 +82,13 @@ exit 0
 
 这段脚本是一个启动脚本，通常用于在系统启动后执行一些必要的操作。根据脚本的内容，它执行以下操作：
 
-    获取当前时间并将其保存到变量 time 中。
-    使用 su root 切换到 root 用户。请注意，这里没有提供密码，所以需要确认系统已经配置为允许该用户无需密码切换到 root 用户。
-    使用 autossh 命令建立一个反向 SSH 隧道，将远程主机的 22 端口映射到本地的 50722 端口。这样可以实现对远程主机的安全访问。
-    切换到 /srv/project/donganhu 目录，并执行名为 start-t.sh 的脚本。
-    切换到 /srv/apache-tomcat-7.0.63/bin 目录，并执行 startup.sh 脚本，启动 Tomcat 服务器。
-    将重启信息和日志记录到 /srv/project/donganhu/restart.log 文件中。
-    最后，脚本退出。
+- 获取当前时间并将其保存到变量 time 中。
+- 使用 su root 切换到 root 用户。请注意，这里没有提供密码，所以需要确认系统已经配置为允许该用户无需密码切换到 root 用户。
+- 使用 autossh 命令建立一个反向 SSH 隧道，将远程主机的 22 端口映射到本地的 50722 端口。这样可以实现对远程主机的安全访问。
+- 切换到 /srv/project/donganhu 目录，并执行名为 start-t.sh 的脚本。
+- 切换到 /srv/apache-tomcat-7.0.63/bin 目录，并执行 startup.sh 脚本，启动 Tomcat 服务器。
+- 将重启信息和日志记录到 /srv/project/donganhu/restart.log 文件中。
+- 最后，脚本退出。
 
 springboot 项目配置
 
@@ -119,9 +122,9 @@ exit 0
 
 这段脚本也是一个启动脚本，和之前的脚本类似，它执行以下操作：
 
-    获取当前时间并将其保存到变量 time 中。
-    使用 su ysb 切换到名为 ysb 的用户。
-    使用 autossh 命令建立两个反向 SSH 隧道，将远程主机的 22 端口映射到本地的 50754 端口和远程主机的 8010 端口映射到本地的 50763 端口。这样可以实现对远程主机的安全访问。
-    切换到 /srv/project/ 目录，并执行名为 start.sh 的脚本。
-    将重启信息和日志记录到 /srv/project/restart.log 文件中。
-    最后，脚本退出。
+- 获取当前时间并将其保存到变量 time 中。
+- 使用 su ysb 切换到名为 ysb 的用户。
+- 使用 autossh 命令建立两个反向 SSH 隧道，将远程主机的 22 端口映射到本地的 50754 端口和远程主机的 8010 端口映射到本地的 50763 端口。这样可以实现对远程主机的安全访问。
+- 切换到 /srv/project/ 目录，并执行名为 start.sh 的脚本。
+- 将重启信息和日志记录到 /srv/project/restart.log 文件中。
+- 最后，脚本退出。

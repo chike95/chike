@@ -40,7 +40,9 @@ sudo reboot
 
 ## 2.1 远程连接
 
-### 2.1.1 安装 ssh openssh
+### 2.1.1 安装 openssh
+
+#### 包管理器安装
 
 ```sh
 sudo apt-get install openssh
@@ -48,6 +50,12 @@ sudo apt-get install openssh-server
 sudo apt-get install openssh-client
 sudo systemctl start ssh-agent.service # 启动ssh服务
 ```
+
+#### 手动安装
+
+<https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.0p1.tar.gz>
+
+tar -xzf openssh-9.0p1.tar.gz
 
 ### 2.1.2 免密登录
 
@@ -85,7 +93,53 @@ ssh root@123.206.175.241
 
 ### 2.1.3 反向代理
 
+#### 包管理器安装
+
+#### 手动安装 autossh
+
+(1) 下载 autossh 压缩包：
+
+首先，你需要在官方网站或其他可信赖的资源中下载 autossh 的压缩包。你可以使用 wget 命令来下载，例如：
+
+<https://www.harding.motd.ca/autossh/autossh-1.4e.tgz>
+
+(2) 解压缩压缩包：
+
+使用以下命令解压缩下载的压缩包：
+
+```bash
+tar -xzf autossh-1.4e.tgz
 ```
+
+(3) 进入解压后的目录：
+
+```bash
+cd autossh-1.4e
+```
+
+(4) 编译和安装 autossh：
+
+在解压后的目录中，执行以下命令编译和安装 autossh：
+
+```bash
+./configure
+make
+sudo make install
+```
+
+(5) 验证安装：
+
+安装完成后，你可以使用以下命令验证 autossh 是否已成功安装：
+
+```bash
+autossh -V
+```
+
+![alt text](img/image-1.png)
+
+#### 配置过程
+
+```bash
 sudo autossh -M 40001 -fCNR '*:40002:127.0.0.1:22' root@123.206.175.241
 ```
 
