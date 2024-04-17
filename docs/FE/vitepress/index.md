@@ -168,3 +168,38 @@ head: [
 (5) 效果图
 
 ![alt text](img/image.png)
+
+## markdown 文档的 vscode 代码片段
+
+参考链接：<https://www.cnblogs.com/jeffery-liu/p/17482768.html#/c/subject/p/17482768.html>
+
+vscode“设置”页面中点击右上角的 json
+
+![alt text](img/image-1.png)
+
+输入下面的内容(主要是 "editor.quickSuggestions": true,)
+
+```json
+"[markdown]": {
+  "editor.renderWhitespace": "all",
+  "editor.quickSuggestions": true,
+  "editor.acceptSuggestionOnEnter": "on"
+}
+```
+
+代码片段
+
+```json
+"md容器": {
+  "prefix": "md-w",
+  "scope": "markdown",
+  "body": [
+    "::: $1",
+    "$2",
+    ":::",
+  ],
+  "description": "Docusaurusb front matter"
+}
+```
+
+![alt text](img/image-2.png)

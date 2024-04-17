@@ -216,7 +216,13 @@ export default {
       collapsed: false,
       items: [
         { text: "xiot系统", link: "/work/software/xiot/" },
-        { text: "initServer", link: "/work/software/xiot/initServer" },
+        {
+          text: "initServer", link: "/work/software/xiot/initServer",
+          items: [
+            { text: "CfgRoot", link: "/work/software/xiot/CfgRoot" },
+            { text: "TypRoot", link: "/work/software/xiot/TypRoot" },
+          ],
+        },
       ],
     },
     {
