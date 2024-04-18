@@ -221,6 +221,8 @@ export default {
           items: [
             { text: "CfgRoot", link: "/work/software/xiot/CfgRoot" },
             { text: "TypRoot", link: "/work/software/xiot/TypRoot" },
+            { text: "SysCtxt", link: "/work/software/xiot/SysCtxt" },
+            { text: "IotData", link: "/work/software/xiot/IotData" },
           ],
         },
       ],

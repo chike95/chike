@@ -201,6 +201,98 @@ saveData(dev[1], buf, num, datas);：调用 saveData 方法，将接收到的数
 
 ### saveDate()
 
+```java
+private void saveData(String rs485/*485地址*/, byte[] data, int len, String[] datas/*数据格式*/) {....}
+```
+
+数据检查：
+
+```java
+if (sPortcIp == null) {
+  System.out.println("\nStmNode.saveData sPortcIp为空");
+  return;
+}
+if (data == null || data.length < 1 || len < 1 || datas == null || datas.length < 2) {
+  System.out.println("\nStmNode.saveData data|len|datas数据无效");
+  return;
+}
+int dataStart = Integer.parseInt(datas[0]), dataLen = Integer.parseInt(datas[1]);
+int crcDataStart = -1, crcDataLen = 0;
+byte[] buf;
+if (dataStart < 1 || dataLen < 1) {
+  System.out.println("\nStmNode.saveData dataStart dataLen无效");
+  return;
+}
+if (dataStart + dataLen > len) {
+  System.out.println("StmNode.saveData data 长度len不足");
+  return;
+}
+if (datas.length > 3) {
+  if (datas[2].length() > 0) crcDataStart = Integer.parseInt(datas[2]);
+  if (datas[3].length() > 0) crcDataLen = Integer.parseInt(datas[3]);
+  if (crcDataStart > -1 && crcDataLen > 0) {
+    if (crcDataStart + crcDataLen + 2 > len) {
+      System.out.println("StmNode.saveData data 长度len还不足");
+      return;
+    }
+    buf = new byte[crcDataLen];
+    System.arraycopy(data, crcDataStart, buf, 0, buf.length);
+    buf = Hex.crc16(buf);
+    if (buf[0] != data[crcDataStart + crcDataLen] || buf[1] != data[crcDataStart + crcDataLen + 1]) {
+      System.out.println("\n[" + Hex.bytes2HexStr(buf) + "]StmNode.saveData data crc校验未通过");
+      return;
+    }
+  }
+}
+```
+
+数据存储与处理
+
+```java
+buf = new byte[dataLen];
+int addr = 256*(data[1]&0xFF) + (data[0]&0xFF), num = 256*(data[7]&0xFF) + (data[6]&0xFF);
+if (Integer.parseInt(rs485) != addr) {
+  System.out.println("StmNode.saveData data中rs485地址不匹配: "+rs485+" =? "+addr);
+  return;
+}
+if (initMs == 0) initMs = tmpMs - num*100;
+else {
+  if (prior - num > 60000) initMs += 65535*100;
+  tmpMs = initMs + num*100;
+}
+prior = num;
+System.arraycopy(data, dataStart, buf, 0, buf.length);
+String key = "" + tmpMs, str = Hex.bytes2HexStr(buf);
+String hour = new SimpleDateFormat(DF).format(new Date(tmpMs));
+IotData.PutData(sPortcIp + rs485 + SubRgx + hour, new String[][]{{key, str}});
+```
+
+::: info 代码解析
+buf 是一个长度为 dataLen 的字节数组，用于存储从 data 数组中提取出来的数据。
+
+addr 是一个整数，表示从 data 数组中解析出的设备地址，根据给定的字节顺序解析。
+
+num 是一个整数，表示从 data 数组中解析出的某种数值，根据给定的字节顺序解析。
+
+接下来的条件判断语句检查 rs485 是否与解析出的设备地址 addr 相匹配，如果不匹配则输出一条消息并返回。
+
+initMs 是一个时间戳，如果其初始值为 0，则将其赋值为 tmpMs - num \* 100。
+
+否则，计算 initMs 的新值。如果 prior - num 大于 60000，则将 initMs 增加 65535 \* 100。
+
+计算 tmpMs 的值为 initMs + num \* 100。
+
+将 prior 更新为 num。
+
+使用 System.arraycopy 方法将 data 数组中从 dataStart 开始的 dataLen 个字节复制到 buf 数组中。
+
+根据一定的格式生成 key 和 str。
+
+格式化时间戳 tmpMs 并提取小时部分。
+
+最后，调用 IotData.PutData 方法，将数据存储到指定的位置。
+:::
+
 ## CnnNode 类
 
 ```java
@@ -227,7 +319,7 @@ public void over() { runFlg = false; } // 终止运行
 
 ### run() 方法
 
-#### 整体分析
+整体分析
 
 - run() 方法是一个实现了 Runnable 接口的线程运行方法，用于在单独的线程中执行任务。
 - 方法中有一个 while 循环，只要 runFlg 为真，就会一直运行。
@@ -238,7 +330,7 @@ public void over() { runFlg = false; } // 终止运行
 - 构造读取数据的指令并发送到设备。
 - 接收设备返回的数据，并保存或处理。
 
-#### 变量
+变量
 
 ```java
 OutputStream os;
@@ -257,3 +349,81 @@ int num, addrStart, addrLen, cmdStart, crcHandleStart, crcHandleLen;
 - String[] strs, addrs, cmds, datas;：分别用于存储设备设置、设备地址、指令、数据等字符串数组。
 - byte[] cmd, buf = new byte[BufLen];：cmd 用于存储构造的指令，buf 用于存储接收到的数据。buf 被初始化为长度为 BufLen 的字节数组。
 - int num, addrStart, addrLen, cmdStart, crcHandleStart, crcHandleLen;：整型变量，分别用于记录数据数量、地址起始位置、地址长度、指令起始位置、CRC 处理起始位置和长度。
+
+## SrvNode
+
+```java
+public ServerSocket srvSkt;
+public HashMap<String, StmNode> stms; // 动态采集客户端端口号_485地址,连接节点
+public HashMap<String, CnnNode> clts; // 静态采集客户端端口号,连接节点
+public HashMap<String, Socket> baks;
+
+public SrvNode(ServerSocket socket) {
+  srvSkt = socket;
+  stms = new HashMap<String, StmNode>();
+  clts = new HashMap<String, CnnNode>();
+  baks = new HashMap<String, Socket>();
+}
+```
+
+::: info 代码解析
+ServerSocket srvSkt;：这是一个 ServerSocket 类型的成员变量，用于表示服务器端的套接字对象。
+
+HashMap<String, StmNode> stms;：这是一个 HashMap 类型的成员变量，用于存储动态采集客户端的端口号和连接节点之间的映射关系。键是字符串类型，对应端口号，值是 StmNode 类型，表示连接节点。
+
+HashMap<String, CnnNode> clts;：这是一个 HashMap 类型的成员变量，用于存储静态采集客户端的端口号和连接节点之间的映射关系。键是字符串类型，对应端口号，值是 CnnNode 类型，表示连接节点。
+
+HashMap<String, Socket> baks;：这是一个 HashMap 类型的成员变量，用于存储备份套接字对象。键是字符串类型，可能表示备份套接字的某种标识，值是 Socket 类型。
+
+public SrvNode(ServerSocket socket)：这是 SrvNode 类的构造函数，接受一个 ServerSocket 对象作为参数。在构造函数中，将传入的 ServerSocket 对象赋值给成员变量 srvSkt，并初始化了 stms、clts 和 baks 这三个 HashMap
+:::
+
+### close()
+
+作用：关闭服务器节点，并释放与之相关的资源，包括服务器套接字对象、动态采集客户端的连接、静态采集客户端的连接以及备份套接字对象。
+
+```java
+if (srvSkt != null && !srvSkt.isClosed()) srvSkt.close();
+srvSkt = null;
+String[] keys = new String[stms.keySet().size()];
+stms.keySet().toArray(keys);
+for (int k1 = 0; k1 < keys.length; k1++) {
+  StmNode stm = stms.get(keys[k1]);
+  if (stm.stmSkt != null && !stm.stmSkt.isClosed()) stm.stmSkt.close();
+  stm.over();
+  stms.remove(keys[k1]);
+}
+keys = new String[clts.keySet().size()];
+clts.keySet().toArray(keys);
+for (int k1 = 0; k1 < keys.length; k1++) {
+  CnnNode cnn = clts.get(keys[k1]);
+  if (cnn.cnnSkt != null && !cnn.cnnSkt.isClosed()) cnn.cnnSkt.close();
+  cnn.over();
+  clts.remove(keys[k1]);
+}
+keys = new String[baks.keySet().size()];
+baks.keySet().toArray(keys);
+for (int k1 = 0; k1 < keys.length; k1++) {
+  Socket skt = baks.get(keys[k1]);
+  if (skt != null && !skt.isClosed()) skt.close();
+  baks.remove(keys[k1]);
+}
+```
+
+::: info 代码解析
+if (srvSkt != null && !srvSkt.isClosed()) srvSkt.close();：首先检查服务器套接字对象 srvSkt 是否为非空且未关闭，如果是，则关闭服务器套接字。
+
+srvSkt = null;：将服务器套接字对象置为 null，释放其引用。
+
+String[] keys = new String[stms.keySet().size()]; stms.keySet().toArray(keys);：创建一个字符串数组 keys，用于存储 stms 哈希表的键集合。
+
+for (int k1 = 0; k1 < keys.length; k1++) { StmNode stm = stms.get(keys[k1]);：遍历 stms 哈希表的键集合，获取每个键对应的值，即 StmNode 对象。
+
+if (stm.stmSkt != null && !stm.stmSkt.isClosed()) stm.stmSkt.close();：如果 StmNode 对象中的套接字对象 stmSkt 不为空且未关闭，那么关闭该套接字。
+
+stm.over();：调用 StmNode 对象的 over 方法，可能是用来处理结束操作的方法。
+
+stms.remove(keys[k1]);：移除 stms 哈希表中当前键所对应的键值对。
+
+类似地，下面两个循环分别处理 clts 和 baks 哈希表中的键值对，并关闭相应的套接字对象以及执行相关的清理操作。
+:::
