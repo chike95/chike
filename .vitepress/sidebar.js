@@ -1,4 +1,5 @@
 export default {
+  /******************************* 电子工程师 ************************************/
   "/EE/comm/": [
     {
       text: "通信",
@@ -60,6 +61,41 @@ export default {
     },
   ],
 
+  "/FE/WEB_3D/": [
+    {
+      text: "Canvas",
+      collapsed: false,
+      items: [
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+        { text: "Echarts", link: "/FE/WEB_3D/" },
+        { text: "Canvas", link: "/FE/WEB_3D/" }],
+    },
+    {
+      text: "Echarts",
+      collapsed: false,
+      items: [
+        { text: "快速开始", link: "/FE/WEB_3D/echarts/01_quickStart" },
+        { text: "Echarts", link: "/FE/WEB_3D/" },
+        { text: "Canvas", link: "/FE/WEB_3D/" }],
+    },
+    {
+      text: "WebGL",
+      collapsed: false,
+      items: [
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+        { text: "Echarts", link: "/FE/WEB_3D/" },
+        { text: "Canvas", link: "/FE/WEB_3D/" }],
+    },
+    {
+      text: "WebGPU",
+      collapsed: false,
+      items: [
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+        { text: "Echarts", link: "/FE/WEB_3D/" },
+        { text: "Canvas", link: "/FE/WEB_3D/" }],
+    },
+  ],
+
   "/FE/typescript/": [
     {
       // text: "TypeScript",
@@ -67,6 +103,22 @@ export default {
       items: [{ text: "TypeScript", link: "/FE/typescript/" }],
     },
   ],
+
+  "/FE/VUE/": [
+    {
+      text: "核心知识",
+      // collapsed: true,
+      items: [{ text: "基础知识", link: "/EE/dev/keil/" }],
+    },
+    {
+      text: "vite 工具",
+      // collapsed: true,
+      items: [
+        { text: "快速开始", link: "/FE/VUE/vite/quickstart" },
+        { text: "基础知识", link: "/FE/VUE/vite/" }],
+    },
+  ],
+
 
   "/RD/linux/": [
     {

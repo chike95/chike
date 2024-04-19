@@ -1,5 +1,7 @@
 # vite
 
+官网：<https://cn.vitejs.dev/guide/>
+
 ### vue 封装 svg
 
 地址 6-7.8：<https://coding.imooc.com/learn/list/577.html>

@@ -13,13 +13,16 @@ export default defineConfig({
     logo: "/logo.jpg",
     outlineTitle: "目录",
     outline: [2, 4],
+    search: {
+      provider: 'local'
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav,
 
     sidebar,
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "github", link: "https://github.com/chike95" },
     ],
   },
 
