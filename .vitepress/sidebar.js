@@ -14,7 +14,7 @@ export default {
       // collapsed: true,
       items: [
         { text: "TypeScript", link: "/FE/typescript/" },
-        { text: "TypeScript", link: "/FE/typescript/" },
+        { text: "基础类型", link: "/FE/typescript/" },
       ],
     },
   ],
@@ -61,38 +61,67 @@ export default {
     },
   ],
 
-  "/FE/WEB_3D/": [
+  /******************************* 前端开发 ************************************/
+
+  "/FE/HTML/": [
     {
-      text: "Canvas",
-      collapsed: false,
+      // text: "TypeScript",
+      // collapsed: true,
       items: [
-        { text: "Canvas", link: "/FE/WEB_3D/" },
-        { text: "Echarts", link: "/FE/WEB_3D/" },
-        { text: "Canvas", link: "/FE/WEB_3D/" }],
+        { text: "HTML", link: "/FE/HTML/01_base" },
+        { text: "页面结构", link: "/FE/HTML/02_page" },
+        { text: "文本相关", link: "/FE/HTML/03_text" },
+        { text: "图片相关", link: "/FE/HTML/04_image" },
+      ],
+    },
+  ],
+
+  "/FE/CSS/": [
+    {
+      text: "核心内容",
+      // collapsed: true,
+      items: [
+        { text: "CSS", link: "/FE/CSS/" },
+        { text: "页面结构", link: "/FE/CSS/02_page" },
+        { text: "文本相关", link: "/FE/CSS/03_text" },
+        { text: "图片相关", link: "/FE/CSS/04_image" },
+      ],
     },
     {
-      text: "Echarts",
+      text: "Element Plus",
       collapsed: false,
       items: [
-        { text: "快速开始", link: "/FE/WEB_3D/echarts/01_quickStart" },
-        { text: "Echarts", link: "/FE/WEB_3D/" },
-        { text: "Canvas", link: "/FE/WEB_3D/" }],
+        { text: "CSS", link: "/FE/CSS/" },
+        { text: "页面结构", link: "/FE/CSS/02_page" },
+        { text: "文本相关", link: "/FE/CSS/03_text" },
+        { text: "图片相关", link: "/FE/CSS/04_image" },
+      ],
     },
     {
-      text: "WebGL",
+      text: "Tailwind",
       collapsed: false,
       items: [
-        { text: "Canvas", link: "/FE/WEB_3D/" },
-        { text: "Echarts", link: "/FE/WEB_3D/" },
-        { text: "Canvas", link: "/FE/WEB_3D/" }],
+        { text: "CSS", link: "/FE/CSS/" },
+        { text: "页面结构", link: "/FE/CSS/02_page" },
+        { text: "文本相关", link: "/FE/CSS/03_text" },
+        { text: "图片相关", link: "/FE/CSS/04_image" },
+      ],
     },
+  ],
+
+  "/FE/JS/": [
     {
-      text: "WebGPU",
-      collapsed: false,
+      // text: "TypeScript",
+      // collapsed: true,
       items: [
-        { text: "Canvas", link: "/FE/WEB_3D/" },
-        { text: "Echarts", link: "/FE/WEB_3D/" },
-        { text: "Canvas", link: "/FE/WEB_3D/" }],
+        { text: "JavaScript", link: "/FE/JS/" },
+        { text: "对象", link: "/FE/JS/grammar" },
+        { text: "函数", link: "/FE/JS/functions" },
+        { text: "数组", link: "/FE/JS/arrays" },
+        { text: "类", link: "/FE/JS/class" },
+        { text: "正则表达式", link: "/FE/JS/regular" },
+        { text: "ES6-13", link: "/FE/JS/ES6" },
+      ],
     },
   ],
 
@@ -100,7 +129,12 @@ export default {
     {
       // text: "TypeScript",
       // collapsed: true,
-      items: [{ text: "TypeScript", link: "/FE/typescript/" }],
+      items: [
+        { text: "TypeScript", link: "/FE/typescript/" },
+        { text: "类型", link: "/FE/typescript/core/type" },
+        { text: "装饰器", link: "/FE/typescript/core/decorator" },
+        { text: "类", link: "/FE/typescript/core/class" },
+      ],
     },
   ],
 
@@ -115,10 +149,49 @@ export default {
       // collapsed: true,
       items: [
         { text: "快速开始", link: "/FE/VUE/vite/quickstart" },
-        { text: "基础知识", link: "/FE/VUE/vite/" }],
+        { text: "基础知识", link: "/FE/VUE/vite/" },
+      ],
     },
   ],
 
+  "/FE/WEB_3D/": [
+    {
+      text: "Canvas",
+      collapsed: false,
+      items: [
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+        { text: "Echarts", link: "/FE/WEB_3D/" },
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+      ],
+    },
+    {
+      text: "Echarts",
+      collapsed: false,
+      items: [
+        { text: "快速开始", link: "/FE/WEB_3D/echarts/01_quickStart" },
+        { text: "Echarts", link: "/FE/WEB_3D/" },
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+      ],
+    },
+    {
+      text: "WebGL",
+      collapsed: false,
+      items: [
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+        { text: "Echarts", link: "/FE/WEB_3D/" },
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+      ],
+    },
+    {
+      text: "WebGPU",
+      collapsed: false,
+      items: [
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+        { text: "Echarts", link: "/FE/WEB_3D/" },
+        { text: "Canvas", link: "/FE/WEB_3D/" },
+      ],
+    },
+  ],
 
   "/RD/linux/": [
     {
@@ -133,6 +206,7 @@ export default {
     },
   ],
 
+  /******************************* 后端开发 ************************************/
   "/RD/node/": [
     {
       text: "node 核心",
@@ -161,40 +235,15 @@ export default {
       ],
     },
     {
-      text: "Express",
-      collapsed: true,
-      items: [
-        { text: "快速入门", link: "/RD/node/express/" },
-        { text: "modbus-serial", link: "/RD/node/library/modbus-serial/" },
-      ],
-    },
-    {
-      text: "Koa",
-      collapsed: true,
-      items: [
-        { text: "快速入门", link: "/RD/node/koa/" },
-        { text: "modbus-serial", link: "/RD/node/library/modbus-serial/" },
-      ],
-    },
-    {
-      text: "NestJS",
+      text: "框架",
       collapsed: false,
       items: [
-        { text: "快速入门", link: "/RD/node/nest/" },
-        { text: "CLI", link: "/RD/node/nest/cli" },
+        { text: "Express", link: "/RD/node/library/modbus-serial/" },
+        { text: "Koa", link: "/RD/node/koa/" },
+        { text: "NestJS", link: "/RD/node/nest/" },
       ],
     },
-    {
-      text: "实战项目: nestJS 小慕图书",
-      collapsed: true,
-      items: [
-        { text: "一、项目分析", link: "/RD/node/nest/book-admin/01" },
-        { text: "二、项目搭建", link: "/RD/node/nest/book-admin/02" },
-        { text: "三、登录模块", link: "/RD/node/nest/book-admin/03" },
-        { text: "四、前端权限", link: "/RD/node/nest/book-admin/04" },
-        { text: "五、图书功能", link: "/RD/node/nest/book-admin/05" },
-      ],
-    },
+
     {
       text: "测试代码",
       collapsed: false,
@@ -208,6 +257,31 @@ export default {
     },
   ],
 
+  "/RD/node/nest/": [
+    {
+      text: "核心概念",
+      collapsed: false,
+      items: [
+        { text: "快速入门", link: "/RD/node/nest/" },
+        { text: "CLI", link: "/RD/node/nest/cli" },
+        { text: "控制器", link: "/RD/node/nest/controllers" },
+        { text: "技术", link: "/RD/node/nest/techniques" },
+      ],
+    },
+    {
+      text: "实战: nestJS 小慕图书",
+      collapsed: false,
+      items: [
+        { text: "一、项目分析", link: "/RD/node/nest/book-admin/01" },
+        { text: "二、项目搭建", link: "/RD/node/nest/book-admin/02" },
+        { text: "三、登录模块", link: "/RD/node/nest/book-admin/03" },
+        { text: "四、前端权限", link: "/RD/node/nest/book-admin/04" },
+        { text: "五、图书功能", link: "/RD/node/nest/book-admin/05" },
+      ],
+    },
+  ],
+
+  /******************************* 工作记录 ************************************/
   "/work/ysb/": [
     {
       text: "分类：振弦式",
@@ -269,7 +343,8 @@ export default {
       items: [
         { text: "xiot系统", link: "/work/software/xiot/" },
         {
-          text: "initServer", link: "/work/software/xiot/initServer",
+          text: "initServer",
+          link: "/work/software/xiot/initServer",
           items: [
             { text: "CfgRoot", link: "/work/software/xiot/CfgRoot" },
             { text: "TypRoot", link: "/work/software/xiot/TypRoot" },
@@ -306,6 +381,7 @@ export default {
     { text: "vivo 全球 AI 研发中心", link: "/work/logs/vivo/240325" },
   ],
 
+  /******************************* 哲思 ************************************/
   "/thought/world/": [
     {
       text: "《道学》",
@@ -364,6 +440,43 @@ export default {
       ],
     },
   ],
+
+  "/practice/BookManage/": [
+    {
+      text: "实践·图书管理",
+      collapsed: false,
+      items: [
+        { text: "混沌领域", link: "/practice/zhenpath/chaos.md" },
+        { text: "需求分析", link: "/practice/zhenpath/requirement.md" },
+        { text: "社区管理", link: "/practice/zhenpath/manage.md" },
+      ],
+    },
+    {
+      text: "后端开发",
+      collapsed: false,
+      items: [
+        { text: "混沌领域", link: "/practice/zhenpath/backend/chaos.md" },
+        { text: "开发环境准备", link: "/practice/zhenpath/backend/setup.md" },
+      ],
+    },
+    {
+      text: "前端开发",
+      collapsed: false,
+      items: [
+        { text: "混沌领域", link: "/practice/zhenpath/frontend/chaos.md" },
+        { text: "开发环境准备", link: "/practice/zhenpath/frontend/setup.md" },
+      ],
+    },
+    {
+      text: "互联网分析",
+      collapsed: false,
+      items: [
+        { text: "web发展", link: "/practice/zhenpath/web/" },
+        { text: "研究内容", link: "/practice/zhenpath/study.md" },
+      ],
+    },
+  ],
+  /******************************* 经济 ************************************/
   "/economy/macro/": [
     {
       // text: "宏观经济",

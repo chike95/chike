@@ -2,19 +2,52 @@
 
 官网：<https://www.typescriptlang.org/>
 
-类型推断
+在线调试：<https://www.typescriptlang.org/zh/play?#code/Q>
 
-当没有明确设置类型时，系统会根据初值推断变量的类型
+小满TS：<https://www.bilibili.com/video/BV1wR4y1377K/>
 
-![alt text](./img/leixingtuiduan.png)
+小满笔记：<https://blog.csdn.net/qq1195566313/category_11559497.html>
 
-类型注解
+### 安装运行
+```bash
+lxm18@lxm_hp MINGW64 /d/projectTest/xiaoman-ts
+$ npm i typescript -g
 
-```js
-let str: string;
+added 1 package in 9s
 
-str = "abc";
+lxm18@lxm_hp MINGW64 /d/projectTest/xiaoman-ts
+$ tsc -v
+Version 5.4.5
+
+lxm18@lxm_hp MINGW64 /d/projectTest/xiaoman-ts
+$ tsc index.ts 
+
+lxm18@lxm_hp MINGW64 /d/projectTest/xiaoman-ts
+$ nodemon index.js
 ```
+
+### 配置文件
+执行以下命令创建配置项: tsconfig.json
+```bash
+tsc --init
+```
+
+然后执行以下命令使用配置项的定义进行监测
+```bash
+tsc -w
+```
+
+配置	说明
+
+noImplicitAny	禁止使用隐含的 any 类型，如函数参数没有设置具体类型
+
+strictNullChecks	开启时不否允许将 null、undefined 赋值给其他类型比如字符串
+
+target	转换成 JS 的版本
+
+strict	是否严格模式执行
+
+module	使用的模块系统
 
 类型断言
 
@@ -36,19 +69,7 @@ const result = numArr.find((item) => item > 2) as number;
 result * 5; // 报错: 'result' is possibly 'undefined'.
 ```
 
-基础类型
 
-字符串
-
-数字
-
-布尔值
-
-null
-
-undefined
-
-联合类型
 
 ```js
 // 限制值类型

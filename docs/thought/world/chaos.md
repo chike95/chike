@@ -20,3 +20,21 @@
 https://www.zhihu.com/question/638507103/answer/3377271203
 
 #### 道学
+
+## 混沌CHAOS课
+混沌CHAOS：<https://www.bilibili.com/video/BV1Wx41187yF/>
+
+【多维】数学漫步 你真的理解四维空间吗？
+<https://www.bilibili.com/video/av13561488/)>
+
+### 万物皆动
+
+### 决定论
+
+确定性转为概率
+
+### 向量场
+
+微积分
+
+### 牛顿力学

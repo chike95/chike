@@ -205,3 +205,12 @@ vscode“设置”页面中点击右上角的 json
 ![alt text](img/image-2.png)
 
 ### 代码组合
+
+
+### 固定图片大小
+
+```
+<img src="./img/image.png" alt="描述文字" width="300" height="200"> 
+```
+
+<img src="./img/image.png" alt="描述文字" width="300" height="200">
