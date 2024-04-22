@@ -91,7 +91,7 @@ export default {
       text: "Element Plus",
       collapsed: false,
       items: [
-        { text: "CSS", link: "/FE/CSS/" },
+        { text: "快速开始", link: "/FE/CSS/ele/" },
         { text: "页面结构", link: "/FE/CSS/02_page" },
         { text: "文本相关", link: "/FE/CSS/03_text" },
         { text: "图片相关", link: "/FE/CSS/04_image" },
@@ -265,6 +265,7 @@ export default {
         { text: "快速入门", link: "/RD/node/nest/" },
         { text: "CLI", link: "/RD/node/nest/cli" },
         { text: "控制器", link: "/RD/node/nest/controllers" },
+        { text: "提供者", link: "/RD/node/nest/providers" },
         { text: "技术", link: "/RD/node/nest/techniques" },
       ],
     },

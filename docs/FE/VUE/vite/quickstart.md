@@ -31,10 +31,8 @@ pnpm create vite my-vue-app --template vue
 在 vite.config.js 文件中添加代理配置：
 
 ```js
-// vite-app/vite.config.js
-import { defineConfig } from "vite";
-
 export default defineConfig({
+  plugins: [vue()],
   server: {
     proxy: {
       // 选项写法
@@ -46,42 +44,6 @@ export default defineConfig({
     },
   },
 });
+
 ```
 
-# In order to enable or disable this script just change the execution
-
-# bits.
-
-#
-
-# By default this script does nothing.
-
-#!bin/bash -e
-time=$(date "+%Y-%m-%d %H:%M:%S")
-su root
-
-sudo autossh -M 40022 -fCNR '\*:40023:127.0.0.1:22' root@123.206.175.241
-
-#
-
-# rc.local
-
-#
-
-# This script is executed at the end of each multiuser runlevel.
-
-# Make sure that the script will "exit 0" on success or any other
-
-# value on error.
-
-#
-
-# rc.local
-
-#
-
-# This script is executed at the end of each multiuser runlevel.
-
-# Make sure that the script will "exit 0" on success or any other
-
-# value on error.
