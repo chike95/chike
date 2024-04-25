@@ -1,6 +1,5 @@
 # NestJs
 
-
 - Nestjs 是一个用于构建高效可扩展的一个基于Node js 服务端 应用程序开发框架
 
 - 完全支持typeScript  结合了 AOP 面向切面的编程方式
@@ -13,12 +12,25 @@
 
 中文文档: <https://docs.nestjs.cn/10/firststeps>
 
-参考教程：小满 nestjs
+参考教程1：小满 nestjs
 
 视频：<https://www.bilibili.com/video/BV1NG41187Bs/>
 
 文档：<https://blog.csdn.net/qq1195566313/category_11844396.html>
 
+参考教程2：
+
+![alt text](img/image-5.png)
+
+视频：<https://coding.imooc.com/class/617.html/>
+
+文档：
+
+功能
+
+![alt text](img/image-6.png)
+
+![alt text](img/image-7.png)
 
 ## 设计模式
 

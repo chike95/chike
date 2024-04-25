@@ -44,10 +44,12 @@ netstat -tuln | grep 8081
 
 ## 文件处理
 
-### 移动文件
+
+
+### 创建文件 
 
 ```bash
-mv /etc/project/myfile.txt /home/myfolder
+touch ~
 ```
 
 ### 复制文件
@@ -60,6 +62,13 @@ cp /etc/project/myfile.txt /home/myfolder
 
 ```bash
 mkdir myfolder
+
+```
+
+### 移动文件
+
+```bash
+mv /etc/project/myfile.txt /home/myfolder
 ```
 
 ### 删除文件

@@ -282,6 +282,31 @@ export default {
     },
   ],
 
+  "/RD/tool": [
+    { text: "Docker", link: "/RD/tools/docker/" },
+    {
+      text: "核心概念",
+      collapsed: false,
+      items: [
+        { text: "快速入门", link: "/RD/node/nest/" },
+        { text: "CLI", link: "/RD/node/nest/cli" },
+        { text: "控制器", link: "/RD/node/nest/controllers" },
+        { text: "提供者", link: "/RD/node/nest/providers" },
+        { text: "技术", link: "/RD/node/nest/techniques" },
+      ],
+    },
+    {
+      text: "实战: nestJS 小慕图书",
+      collapsed: false,
+      items: [
+        { text: "一、项目分析", link: "/RD/node/nest/book-admin/01" },
+        { text: "二、项目搭建", link: "/RD/node/nest/book-admin/02" },
+        { text: "三、登录模块", link: "/RD/node/nest/book-admin/03" },
+        { text: "四、前端权限", link: "/RD/node/nest/book-admin/04" },
+        { text: "五、图书功能", link: "/RD/node/nest/book-admin/05" },
+      ],
+    },
+  ],
   /******************************* 工作记录 ************************************/
   "/work/ysb/": [
     {
