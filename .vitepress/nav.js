@@ -32,6 +32,7 @@ export default [
       {
         text: "开发工具",
         items: [
+          { text: "Chrome", link: "/FE/chrome/" },
           { text: "VSCode", link: "/FE/tools/vscode/" },
           { text: "Postmon", link: "/FE/vitepress/" },
         ],
