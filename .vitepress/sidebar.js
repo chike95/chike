@@ -567,13 +567,11 @@ export default {
   "/economy/macro/situation/Japan/": [
     {
       text: "《日本宏观经济研究》",
-      items: [
-        {
-          text: "240319：日元加息",
-          link: "/economy/macro/situation/Japan/240319",
-        },
-        { text: "趋势投资的概念", link: "/economy/stock/trend/concept" },
-      ],
+      link: "/economy/macro/situation/Japan/",
+    },
+    {
+      text: "240319：日元加息",
+      link: "/economy/macro/situation/Japan/240319",
     },
   ],
 
