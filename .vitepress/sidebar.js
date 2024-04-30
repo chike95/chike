@@ -199,10 +199,14 @@ export default {
       // collapsed: true,
       items: [{ text: "ssh", link: "/RD/linux/ssh" }],
     },
+
     {
       text: "软件",
       collapsed: false,
-      items: [{ text: "onboard", link: "/RD/linux/software/onboard/" }],
+      items: [
+        { text: "宝塔面板", link: "/RD/linux/baota/" },
+        { text: "onboard", link: "/RD/linux/software/onboard/" },
+      ],
     },
   ],
 
@@ -238,7 +242,7 @@ export default {
       text: "框架",
       collapsed: false,
       items: [
-        { text: "Express", link: "/RD/node/library/modbus-serial/" },
+        { text: "Express", link: "/RD/node/express/" },
         { text: "Koa", link: "/RD/node/koa/" },
         { text: "NestJS", link: "/RD/node/nest/" },
       ],
@@ -253,6 +257,51 @@ export default {
           link: "/RD/node/test/getSubtitle/",
         },
         { text: "二、项目搭建", link: "/RD/node/nest/book-admin/02" },
+      ],
+    },
+  ],
+
+  "/RD/node/express/": [
+    {
+      text: "核心概念",
+      collapsed: false,
+      items: [
+        { text: "koa", link: "/RD/node/express/" },
+      ],
+    },
+    {
+      text: "实战: koa2打造新浪微博",
+      collapsed: false,
+      items: [
+        { text: "一、项目分析", link: "/RD/node/koa/koa2-sina-01" },
+        { text: "二、技术选型和知识点介绍", link: "/RD/node/koa/koa2-sina-02" },
+        { text: "三、用户管理", link: "/RD/node/koa/koa2-sina-03" },
+        { text: "四、用户设置", link: "/RD/node/koa/koa2-sina-04" },
+        { text: "五、创建微博", link: "/RD/node/koa/koa2-sina-05" },
+        { text: "六、个人主页", link: "/RD/node/koa/koa2-sina-06" },
+        { text: "七、广场页面", link: "/RD/node/koa/koa2-sina-07" },
+      ],
+    },
+  ],
+  "/RD/node/koa/": [
+    {
+      text: "核心概念",
+      collapsed: false,
+      items: [
+        { text: "koa", link: "/RD/node/koa/" },
+      ],
+    },
+    {
+      text: "实战: koa2打造新浪微博",
+      collapsed: false,
+      items: [
+        { text: "一、项目分析", link: "/RD/node/koa/koa2-sina-01" },
+        { text: "二、技术选型和知识点介绍", link: "/RD/node/koa/koa2-sina-02" },
+        { text: "三、用户管理", link: "/RD/node/koa/koa2-sina-03" },
+        { text: "四、用户设置", link: "/RD/node/koa/koa2-sina-04" },
+        { text: "五、创建微博", link: "/RD/node/koa/koa2-sina-05" },
+        { text: "六、个人主页", link: "/RD/node/koa/koa2-sina-06" },
+        { text: "七、广场页面", link: "/RD/node/koa/koa2-sina-07" },
       ],
     },
   ],
@@ -282,6 +331,17 @@ export default {
     },
   ],
 
+  "/RD/java": [
+    {
+      text: "核心概念",
+      collapsed: false,
+      items: [
+        { text: "快速入门", link: "/RD/java/01_config" },
+        { text: "CLI", link: "" },
+      ],
+    },
+
+  ],
   "/RD/tool": [
     { text: "Docker", link: "/RD/tools/docker/" },
     {
@@ -378,6 +438,13 @@ export default {
             { text: "IotData", link: "/work/software/xiot/IotData" },
           ],
         },
+      ],
+    },
+    {
+      text: "# Nest 健康监测系统开发",
+      collapsed: false,
+      items: [
+        { text: "Nest 健康监测系统开发", link: "/work/software/xiot-nest/" },
       ],
     },
     {

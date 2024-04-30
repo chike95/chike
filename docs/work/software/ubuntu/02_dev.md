@@ -4,9 +4,29 @@
 
 （1）首先查看目前 ip
 
+```bash
+ipconfig
+```
+
 ![alt text](img/image.png)
 
 （2）打开配置文件
+
+::: warning 注意事项，netplan 为 ubuntu18+默认配置文件
+检查是否安装
+
+```bash
+ubuntu@ubuntu:~$ which netplan
+/usr/sbin/netplan
+```
+
+没有返回的话，需要自行安装
+
+```bash
+sudo apt-get install netplan.io
+```
+
+:::
 
 ```sh
 sudo vi /etc/netplan/01-netcfg.yaml
@@ -32,10 +52,30 @@ network:
               addresses: [192.168.30.1]
 ```
 
+应用
+
+```bash
+sudo netplan apply
+```
+
 重启：
 
 ```sh
 sudo reboot
+```
+
+查看是否成功
+
+```bash
+ubuntu@ubuntu:~$ ip addr show eth0
+9: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 00:c2:03:ba:dd:6e brd ff:ff:ff:ff:ff:ff
+    inet 192.168.30.100/24 brd 192.168.30.255 scope global eth0
+    inet6 fe80::e975:6b79:93ae:b137/64 scope link
+       valid_lft forever preferred_lft forever
+    inet6 fe80::2c2:3ff:feba:dd6e/64 scope link
+       valid_lft forever preferred_lft forever
+
 ```
 
 ## 2.1 远程连接
@@ -49,6 +89,8 @@ sudo apt-get install openssh
 sudo apt-get install openssh-server
 sudo apt-get install openssh-client
 sudo systemctl start ssh-agent.service # 启动ssh服务
+
+sudo systemctl status ssh # 检查OpenSSH服务器的状态，并确保它正在运行。
 ```
 
 #### 手动安装
