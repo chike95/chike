@@ -152,6 +152,14 @@ export default {
         { text: "基础知识", link: "/FE/VUE/vite/" },
       ],
     },
+    {
+      text: "Vben Admin",
+      // collapsed: true,
+      items: [
+        { text: "核心知识", link: "/FE/VUE/vben/" },
+        { text: "基础知识", link: "" },
+      ],
+    },
   ],
 
   "/FE/WEB_3D/": [
@@ -444,7 +452,8 @@ export default {
       text: "# Nest 健康监测系统开发",
       collapsed: false,
       items: [
-        { text: "Nest 健康监测系统开发", link: "/work/software/xiot-nest/" },
+        { text: "项目分析", link: "/work/software/xiot-nest/" },
+        { text: "vite-projet 前端", link: "/work/software/xiot-nest/vite-project/" },
       ],
     },
     {

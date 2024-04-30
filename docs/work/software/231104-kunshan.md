@@ -2,6 +2,8 @@
 
 ## 振弦采集
 
+代码：/js/dcvw.js
+
 ### 发送指令
 
 ```js
@@ -318,6 +320,8 @@ setTimeout(function () {
 ```
 
 ## 485 倾角
+
+代码：/js/hori.js
 
 ### 数据转换
 
