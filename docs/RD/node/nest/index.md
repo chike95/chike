@@ -8,9 +8,12 @@
 
 - nestjs 的底层代码运用了 express 和  Fastify 在他们的基础上提供了一定程度的抽象，同时也将其 API 直接暴露给开发人员。这样可以轻松使用每个平台的无数第三方模块
 
+
 官方文档: <https://nest.nodejs.cn/>
 
 中文文档: <https://docs.nestjs.cn/10/firststeps>
+
+github：<https://github.com/nestjs/nest>
 
 参考教程1：小满 nestjs
 
@@ -25,8 +28,6 @@
 视频：<https://coding.imooc.com/class/617.html/>
 
 文档：
-
-功能
 
 ![alt text](img/image-6.png)
 
