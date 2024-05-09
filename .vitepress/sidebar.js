@@ -273,9 +273,7 @@ export default {
     {
       text: "核心概念",
       collapsed: false,
-      items: [
-        { text: "koa", link: "/RD/node/express/" },
-      ],
+      items: [{ text: "koa", link: "/RD/node/express/" }],
     },
     {
       text: "实战: koa2打造新浪微博",
@@ -295,9 +293,7 @@ export default {
     {
       text: "核心概念",
       collapsed: false,
-      items: [
-        { text: "koa", link: "/RD/node/koa/" },
-      ],
+      items: [{ text: "koa", link: "/RD/node/koa/" }],
     },
     {
       text: "实战: koa2打造新浪微博",
@@ -320,6 +316,8 @@ export default {
       collapsed: false,
       items: [
         { text: "快速入门", link: "/RD/node/nest/" },
+        { text: "项目规范", link: "/RD/node/nest/specification" },
+        { text: "高效开发", link: "/RD/node/nest/efficient" },
         { text: "CLI", link: "/RD/node/nest/cli" },
         { text: "控制器", link: "/RD/node/nest/controllers" },
         { text: "提供者", link: "/RD/node/nest/providers" },
@@ -348,7 +346,6 @@ export default {
         { text: "CLI", link: "" },
       ],
     },
-
   ],
   "/RD/tool": [
     { text: "Docker", link: "/RD/tools/docker/" },
@@ -453,7 +450,10 @@ export default {
       collapsed: false,
       items: [
         { text: "项目分析", link: "/work/software/xiot-nest/" },
-        { text: "vite-projet 前端", link: "/work/software/xiot-nest/vite-project/" },
+        {
+          text: "vite-projet 前端",
+          link: "/work/software/xiot-nest/vite-project/",
+        },
       ],
     },
     {
