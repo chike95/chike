@@ -2,7 +2,7 @@
 
 ### 批量重命名文件
 
-```sh
+```bash
 Get-ChildItem -Path "D:\project\chike\docs" -Filter "README.md" -Recurse | Rename-Item -NewName { $_.Name -replace 'README.md','index.md' }
 ```
 
@@ -10,6 +10,6 @@ Get-ChildItem -Path "D:\project\chike\docs" -Filter "README.md" -Recurse | Renam
 
 ### 创建文件
 
-```sh
+```bash
 echo. > filename.txt
 ```

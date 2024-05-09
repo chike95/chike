@@ -346,7 +346,43 @@ export default {
         { text: "CLI", link: "" },
       ],
     },
+    {
+      text: "框架",
+      collapsed: false,
+      items: [
+        { text: "Express", link: "/RD/node/express/" },
+        { text: "Koa", link: "/RD/node/koa/" },
+        { text: "Spring", link: "/RD/java/spring/" }
+      ],
+    },
+
   ],
+
+  "/RD/java/spring/": [
+    {
+      text: "核心概念",
+      collapsed: false,
+      items: [
+        { text: "项目搭建", link: "/RD/java/spring/construction" },
+        { text: "项目部署", link: "/RD/java/spring/deploy" },
+      ],
+    },
+    { text: "常用库", link: "" },
+    {
+      text: "实战: wiki知识库系统",
+      collapsed: false,
+      items: [
+        { text: "零：项目介绍", link: "/RD/java/spring/wiki/" },
+        { text: "一：电子书管理", link: "/RD/java/spring/wiki/01-book" },
+        { text: "二：分类管理", link: "/RD/java/spring/wiki/02-classification" },
+        { text: "三：文档管理", link: "/RD/java/spring/wiki/03-document" },
+        { text: "四：用户管理", link: "/RD/java/spring/wiki/04-user" },
+        { text: "五：阅读量&点赞量", link: "/RD/java/spring/wiki/05-statistics" },
+        { text: "六：知识库功能开发", link: "/RD/java/spring/wiki/06-libraries" },
+      ],
+    },
+  ],
+
   "/RD/tool": [
     { text: "Docker", link: "/RD/tools/docker/" },
     {

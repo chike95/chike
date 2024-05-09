@@ -42,9 +42,8 @@ export default [
   {
     text: "后端开发",
     items: [
-      { text: "Node", link: "/RD/node/" },
-      { text: "Java", link: "/RD/java/" },
-      { text: "Spring", link: "/RD/spring/" },
+      { text: "NODE", link: "/RD/node/" },
+      { text: "JAVA", link: "/RD/java/" },
       { text: "工具", link: "/RD/tools/" },
       { text: "常见需求", link: "/RD/business/" },
       {
