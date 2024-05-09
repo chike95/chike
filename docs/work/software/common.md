@@ -139,3 +139,27 @@ function net() {
 
 在函数的最后，返回了包含所有定义的函数和变量的对象 obj，作为模块的导出。
 :::
+
+## 更换图片
+
+![alt text](img/image-1.png)
+
+```js
+const imageSources = [
+  "/objects/drawimage/dvw/HJ01.JPG",
+  "/objects/drawimage/dvw/HJ02.JPG",
+  "/objects/drawimage/dvw/HJ03.JPG",
+  "/objects/drawimage/dvw/HJ04.JPG",
+  "/objects/drawimage/dvw/HJ05.JPG",
+  "/objects/drawimage/dvw/HJ06.JPG",
+  "/objects/drawimage/dvw/HJ07.JPG",
+  "/objects/drawimage/dvw/HJ08.JPG",
+];
+const parentIndex = $(this).parent().parent().index(); // 获取祖父元素的索引
+
+if (parentIndex >= 0 && parentIndex < imageSources.length) {
+  $(".mianimg").attr("src", imageSources[parentIndex]);
+}
+```
+
+![alt text](img/image.png)
