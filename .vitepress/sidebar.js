@@ -460,7 +460,7 @@ export default {
       text: "shmcom",
       collapsed: false,
       items: [
-        { text: "tcp服务", link: "/work/software/common" },
+        { text: "shmcom系统概述", link: "/work/software/shmcom/" },
         { text: "系统采集", link: "/work/software/231104-kunshan" },
       ],
     },
@@ -468,7 +468,7 @@ export default {
       text: "xiot",
       collapsed: false,
       items: [
-        { text: "xiot系统", link: "/work/software/xiot/" },
+        { text: "xiot系统概述", link: "/work/software/xiot/" },
         {
           text: "initServer",
           link: "/work/software/xiot/initServer",
