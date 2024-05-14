@@ -205,19 +205,29 @@ export default {
     },
   ],
 
-  "/RD/linux/": [
+  "/FE/others/": [
     {
-      text: "基础知识",
+      text: "常用库",
       // collapsed: true,
-      items: [{ text: "ssh", link: "/RD/linux/ssh" }],
-    },
-
-    {
-      text: "软件",
-      collapsed: false,
       items: [
-        { text: "宝塔面板", link: "/RD/linux/baota/" },
-        { text: "onboard", link: "/RD/linux/software/onboard/" },
+        { text: "Ajax", link: "/FE/others/ajax/" },
+        { text: "Axios", link: "/FE/others/Axios/" }
+      ],
+    },
+    {
+      text: "vite 工具",
+      // collapsed: true,
+      items: [
+        { text: "快速开始", link: "/FE/VUE/vite/quickstart" },
+        { text: "基础知识", link: "/FE/VUE/vite/" },
+      ],
+    },
+    {
+      text: "Vben Admin",
+      // collapsed: true,
+      items: [
+        { text: "核心知识", link: "/FE/VUE/vben/" },
+        { text: "基础知识", link: "" },
       ],
     },
   ],
@@ -412,6 +422,24 @@ export default {
       ],
     },
   ],
+
+  "/RD/linux/": [
+    {
+      text: "基础知识",
+      // collapsed: true,
+      items: [{ text: "ssh", link: "/RD/linux/ssh" }],
+    },
+
+    {
+      text: "软件",
+      collapsed: false,
+      items: [
+        { text: "宝塔面板", link: "/RD/linux/baota/" },
+        { text: "onboard", link: "/RD/linux/software/onboard/" },
+      ],
+    },
+  ],
+
   /******************************* 工作记录 ************************************/
   "/work/ysb/": [
     {

@@ -26,7 +26,7 @@ export default [
           { text: "VUE", link: "/FE/VUE/" },
           { text: "vitepress", link: "/FE/vitepress/" },
           { text: "WEB_3D", link: "/FE/WEB_3D/" },
-          { text: "相关技术", link: "/FE/others/" },
+          { text: "技术集合", link: "/FE/others/" },
         ],
       },
       {
@@ -34,7 +34,7 @@ export default [
         items: [
           { text: "Chrome", link: "/FE/chrome/" },
           { text: "VSCode", link: "/FE/tools/vscode/" },
-          { text: "Postmon", link: "/FE/vitepress/" },
+          { text: "其它工具", link: "/FE/tools/vscode/" },
         ],
       },
     ],
