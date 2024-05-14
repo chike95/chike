@@ -93,8 +93,14 @@ export default {
       items: [
         { text: "快速开始", link: "/FE/CSS/ele/" },
         { text: "页面结构", link: "/FE/CSS/02_page" },
-        { text: "文本相关", link: "/FE/CSS/03_text" },
-        { text: "图片相关", link: "/FE/CSS/04_image" },
+      ],
+    },
+    {
+      text: "Ant Design Vue",
+      collapsed: false,
+      items: [
+        { text: "快速入门", link: "/FE/CSS/antdv/" },
+        { text: "页面结构", link: "/FE/CSS/02_page" },
       ],
     },
     {
@@ -103,8 +109,6 @@ export default {
       items: [
         { text: "CSS", link: "/FE/CSS/" },
         { text: "页面结构", link: "/FE/CSS/02_page" },
-        { text: "文本相关", link: "/FE/CSS/03_text" },
-        { text: "图片相关", link: "/FE/CSS/04_image" },
       ],
     },
   ],
