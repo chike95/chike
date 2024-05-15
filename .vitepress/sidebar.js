@@ -211,7 +211,7 @@ export default {
       // collapsed: true,
       items: [
         { text: "Ajax", link: "/FE/others/ajax/" },
-        { text: "Axios", link: "/FE/others/Axios/" }
+        { text: "Axios", link: "/FE/others/Axios/" },
       ],
     },
     {
@@ -360,16 +360,16 @@ export default {
         { text: "CLI", link: "" },
       ],
     },
+    { text: "IDEA", link: "/RD/java/idea/" },
     {
       text: "框架",
       collapsed: false,
       items: [
         { text: "Express", link: "/RD/node/express/" },
         { text: "Koa", link: "/RD/node/koa/" },
-        { text: "Spring", link: "/RD/java/spring/" }
+        { text: "Spring", link: "/RD/java/spring/" },
       ],
     },
-
   ],
 
   "/RD/java/spring/": [
@@ -388,11 +388,20 @@ export default {
       items: [
         { text: "零：项目介绍", link: "/RD/java/spring/wiki/" },
         { text: "一：电子书管理", link: "/RD/java/spring/wiki/01-book" },
-        { text: "二：分类管理", link: "/RD/java/spring/wiki/02-classification" },
+        {
+          text: "二：分类管理",
+          link: "/RD/java/spring/wiki/02-classification",
+        },
         { text: "三：文档管理", link: "/RD/java/spring/wiki/03-document" },
         { text: "四：用户管理", link: "/RD/java/spring/wiki/04-user" },
-        { text: "五：阅读量&点赞量", link: "/RD/java/spring/wiki/05-statistics" },
-        { text: "六：知识库功能开发", link: "/RD/java/spring/wiki/06-libraries" },
+        {
+          text: "五：阅读量&点赞量",
+          link: "/RD/java/spring/wiki/05-statistics",
+        },
+        {
+          text: "六：知识库功能开发",
+          link: "/RD/java/spring/wiki/06-libraries",
+        },
       ],
     },
   ],

@@ -222,4 +222,81 @@ idea失去焦点 5s 后激活
 
 
 
+### Mybatis
 
+持久层框架：mybatis hibernate
+
+#### 集成
+
+（1）添加依赖
+
+```xml
+<!-- MyBatis -->
+<dependency>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis</artifactId>
+    <version>3.5.9</version>
+</dependency>
+<!-- 数据库驱动，例如MySQL -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.28</version>
+</dependency>
+```
+
+（2）配置文件
+
+```properties
+# 配置数据源
+spring.datasource.url=jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=123456
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+```
+
+（3）配置持久层 Mapper
+
+持久层叫Mapper层，即广为人知的Dao层。因为后续要用官方代码生成器，其生成的代码就是 XXXMapper.java 文件。
+
+```java
+package com.example.sbproject.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
+
+@Mapper
+public interface UserMapper {
+    @Select("SELECT * FROM user WHERE id = #{id}")
+    User findById(Long id);
+}
+```
+
+（4）配置Service
+
+```java
+package com.example.sbproject.service;
+
+import com.example.sbproject.mapper.UserMapper;
+import com.example.sbproject.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+    @Autowired
+    private UserMapper userMapper;
+
+    public User findById(Long id) {
+        return userMapper.findById(id);
+    }
+}
+```
+
+插件
+
+![alt text](img/image-25.png)
+
+当我们在写Springboot配置文件application.properties时引入mybatis配置文件出现以下情况：“ Cannot resolve configuration property ‘mybatis.mapper-location’ ”
+
+<https://blog.csdn.net/m0_52734879/article/details/115408871>
