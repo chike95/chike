@@ -581,7 +581,12 @@ export default {
       collapsed: false,
       items: [
         { text: "混沌领域", link: "/practice/zhenpath/chaos.md" },
-        { text: "需求分析", link: "/practice/zhenpath/requirement.md" },
+        { text: "创意和概念", link: "/practice/zhenpath/ideas.md" },
+        { text: "调研和分析", link: "/practice/zhenpath/survey.md" },
+        { text: "规划和设计", link: "/practice/zhenpath/design.md" },
+        { text: "技术开发", link: "/practice/zhenpath/development.md" },
+        { text: "运营和推广", link: "/practice/zhenpath/operate.md" },
+        { text: "更新和改进", link: "/practice/zhenpath/optimize.md" },
         { text: "社区管理", link: "/practice/zhenpath/manage.md" },
       ],
     },
@@ -590,7 +595,7 @@ export default {
       collapsed: false,
       items: [
         { text: "混沌领域", link: "/practice/zhenpath/backend/chaos.md" },
-        { text: "开发环境准备", link: "/practice/zhenpath/backend/setup.md" },
+        { text: "环境准备", link: "/practice/zhenpath/backend/setup.md" },
       ],
     },
     {
@@ -598,7 +603,7 @@ export default {
       collapsed: false,
       items: [
         { text: "混沌领域", link: "/practice/zhenpath/frontend/chaos.md" },
-        { text: "开发环境准备", link: "/practice/zhenpath/frontend/setup.md" },
+        { text: "环境准备", link: "/practice/zhenpath/frontend/setup.md" },
       ],
     },
     {

@@ -90,11 +90,3 @@ function read() {
 write 函数中的 client.writeRegister().then(console.log).then(read)可能会导致不可预测的行为，因为 read 函数会在写入操作之前就被调用。
 
 其次，在 read 函数中，通过循环设置设备 ID 并读取保持寄存器的值是不合适的，这将导致对多个设备进行读取操作而不是特定的设备。
-
-## 工作记录
-
-2024-02-26：modbus 测试
-
-2024-02-27：编写 modbus 测试程序
-
-2024-03-25：组装采集箱

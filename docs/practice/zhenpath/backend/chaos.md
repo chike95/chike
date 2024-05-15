@@ -24,21 +24,33 @@ wp_comments
 
 wp_links
 
+功能：用于存储友情链接（Blogroll）信息，这是旧版本 WordPress 或某些链接管理插件使用的功能。
+
 #### 文章信息
 
 wp_options
+
+功能：用于存储 WordPress 系统的各种设置和选项，如站点 URL、管理员电子邮件地址、时区设置等。此外，还用于存储插件和主题的配置信息。
 
 wp_postmeta
 
 wp_posts
 
+功能：用于存储所有的文章、页面、自定义帖子类型的数据。这包括帖子的内容、标题、发布时间、作者、状态等。
+
 #### 分类信息
 
 wp_terms
 
+功能：用于存储分类目录、标签、自定义分类法的术语。这些术语用于组织和管理网站的内容。
+
 wp_term_relationships
 
+功能：用于存储每个文章、页面或其他内容与特定分类或标签之间的关系。这有助于确定哪些内容属于哪个分类或标签。
+
 wp_term_taxonomy
+
+功能：用于存储每个分类或标签的分类法（taxonomy）信息。分类法是一种将术语（如标签和分类）组织成层次结构或平面的方式。
 
 wp_termmeta
 
@@ -79,6 +91,10 @@ wp_dashboard_quick_press_last_post_id：上次发布文章ID
 ```
 
 wp_users：用户基本信息表
+
+功能：用于存储用户的基本信息，包括用户名、密码（通常经过哈希处理）、电子邮件、用户角色等。
+
+字段示例：ID、user_login、user_pass、user_email、user_role 等。
 
 ```sh
 ID：用户ID

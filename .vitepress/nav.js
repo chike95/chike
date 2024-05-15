@@ -3,6 +3,7 @@ export default [
     text: "硬件设计",
     items: [
       { text: "通信原理", link: "/EE/comm/" },
+      { text: "C/C++", link: "/EE/C/" },
       { text: "元器件", link: "/EE/components/" },
       { text: "开发板", link: "/EE/DB/" },
       { text: "开发环境", link: "/EE/dev/" },
@@ -44,6 +45,7 @@ export default [
     items: [
       { text: "NODE", link: "/RD/node/" },
       { text: "JAVA", link: "/RD/java/" },
+      { text: "Python", link: "/RD/python/" },
       { text: "工具", link: "/RD/tools/" },
       { text: "常见需求", link: "/RD/business/" },
       {
