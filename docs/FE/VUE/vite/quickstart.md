@@ -4,6 +4,7 @@
 
 ```bash [npm]
 npm create vite@latest
+
 ```
 
 ```bash [pnpm]
@@ -25,6 +26,17 @@ pnpm create vite my-vue-app --template vue
 ```
 
 :::
+
+启动项目：
+
+```bash
+cd my-vue-app
+
+pnpm install
+
+pnpm run dev
+
+```
 
 ## 开启跨域
 

@@ -149,6 +149,14 @@ export default {
       items: [{ text: "基础知识", link: "/EE/dev/keil/" }],
     },
     {
+      text: "工具链",
+      // collapsed: true,
+      items: [
+        { text: "vue-router", link: "/FE/VUE/vue-router" },
+        { text: "基础知识", link: "/FE/VUE/vite/" },
+      ],
+    },
+    {
       text: "vite 工具",
       // collapsed: true,
       items: [
@@ -693,7 +701,7 @@ export default {
       collapsed: false,
       items: [
         { text: "美国", link: "/economy/macro/situation/Japan/240319" },
-        { text: "中国", link: "/economy/macro/chaos.md" },
+        { text: "中国", link: "/economy/macro/situation/China/" },
         { text: "日本", link: "/economy/macro/situation/Japan/" },
         { text: "德国", link: "/economy/macro/chaos.md" },
         { text: "印度", link: "/economy/macro/chaos.md" },

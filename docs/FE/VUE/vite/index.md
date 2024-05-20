@@ -102,3 +102,20 @@ export default defineConfig({
 ```js
 import "virtual:svg-icons-register";
 ```
+
+### Vue3+Ts+vite设置别名@
+
+https://www.bilibili.com/read/cv32352171/
+
+```ts
+// 在vite.config.ts文件中如下配置
+import path from "path";
+export default defineConfig({
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"), // 为./src配置别名
+    },
+  },
+});
+
+```
