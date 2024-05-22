@@ -494,6 +494,7 @@ export default {
     { text: "大华摄像头", link: "/work/devices/dahua/camera" },
     { text: "ZH-T08R-14N1", link: "/work/devices/ZH-T08R-14N1/strain-8R" },
     { text: "蒲公英R300路由器", link: "/work/devices/oray/R300" },
+    { text: "软方平板电脑", link: "/work/devices/cosofteck/" },
   ],
 
   "/work/software/": [
@@ -560,6 +561,8 @@ export default {
 
   "/work/logs/": [
     { text: "端口分配", link: "/work/logs/port" },
+    { text: "武汉阿里", link: "/work/logs/whal/" },
+    { text: "上海金鼎", link: "/work/logs/jinding/" },
     { text: "新天地", link: "/work/logs/xintiandi/" },
     { text: "泰康", link: "/work/logs/taikang/240325" },
     { text: "滨州体育中心", link: "/work/logs/binzhou/240402" },
