@@ -146,7 +146,10 @@ export default {
     {
       text: "核心知识",
       // collapsed: true,
-      items: [{ text: "基础知识", link: "/EE/dev/keil/" }],
+      items: [
+        { text: "VUE 简介", link: "/FE/VUE/" },
+        { text: "混沌领域", link: "/FE/VUE/core/chaos" },
+      ],
     },
     {
       text: "工具链",
