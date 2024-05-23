@@ -625,6 +625,7 @@ export default {
       items: [
         { text: "混沌领域", link: "/practice/zhenpath/backend/chaos.md" },
         { text: "环境准备", link: "/practice/zhenpath/backend/setup.md" },
+        { text: "数据库结构设计", link: "/practice/zhenpath/backend/database" },
       ],
     },
     {
