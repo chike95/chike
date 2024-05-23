@@ -87,5 +87,17 @@
 
 5-3 Vue3 数据绑定显示列表数据
 
+5-4 电子书列表界面展示
+
+5-5 Vue CLI多环境配置
+
+5-6 使用Axios拦截器打印前端日志
+
+5-7 SpringBoot过滤器的使用
+
+5-8 SpringBoot拦截器的使用
+
+5-9 SpringBoot AOP的使用
+
 
 ## 项目总结
