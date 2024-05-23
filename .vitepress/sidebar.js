@@ -495,6 +495,15 @@ export default {
     { text: "ZH-T08R-14N1", link: "/work/devices/ZH-T08R-14N1/strain-8R" },
     { text: "蒲公英R300路由器", link: "/work/devices/oray/R300" },
     { text: "软方平板电脑", link: "/work/devices/cosofteck/" },
+    { text: "MERCURY无线网桥", link: "/work/devices/mercury/" },
+    {
+      text: "TP-LINK",
+      collapsed: false,
+      items: [
+        { text: "无线 AP TL-AP302P", link: "/work/devices/TP-LINK/TL-AP302P" },
+        { text: "485 倾角仪", link: "/work/ysb/485inclinometer/" },
+      ],
+    },
   ],
 
   "/work/software/": [
