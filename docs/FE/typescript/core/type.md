@@ -8,7 +8,7 @@ javascript 本身提供类型支持，但有以下几个问题：
 
 - 使用 js 不能自定义类型，比如下面的 name 我们想只允许是 lxm yefenglin 值，但实际上是可以传递任何值的。
 
-而在typescript 中，可以将类型理解为一类值的集合，比如 'lxm'、'夜枫林'都属于 string 类型集合。
+而在 typescript 中，可以将类型理解为一类值的集合，比如 'lxm'、'夜枫林'都属于 string 类型集合。
 
 ### 类型注解
 
@@ -23,21 +23,21 @@ str = "abc";
 下面没有使用类型限制时，函数参数传入字符串也是可以执行的，显示这个结果是不对的
 
 ```ts
-function sum(a,b){
-	return a+b;
+function sum(a, b) {
+  return a + b;
 }
 
-console.log(sum('a',3)); //结果为 a3
+console.log(sum("a", 3)); //结果为 a3
 ```
 
 加上严格类型后，在编译环节就会提示错误
 
 ```ts
-function sum(a:number,b:number){
-	return a+b;
+function sum(a: number, b: number) {
+  return a + b;
 }
 
-console.log(sum('a',3))
+console.log(sum("a", 3));
 //报错 Argument of type 'string' is not assignable to parameter of type 'number'.
 ```
 
@@ -56,71 +56,74 @@ console.log(sum('a',3))
 - 5.'lxm' false 1
 - 6.never
 
-
 ## 基础类型
 
 ### string
 
-字符串是使用string定义的
+字符串是使用 string 定义的
 
 ```ts
-let a: string = 'yefenglin'
+let a: string = "yefenglin";
 //普通声明
- 
+
 //也可以使用es6的字符串模板
-let str: string = `dddd${a}`
+let str: string = `dddd${a}`;
 ```
+
 ### number
 
 支持十六进制、十进制、八进制和二进制；
 
 ```ts
-let notANumber: number = NaN;//Nan
-let num: number = 123;//普通数字
-let infinityNumber: number = Infinity;//无穷大
-let decimal: number = 6;//十进制
-let hex: number = 0xf00d;//十六进制
-let binary: number = 0b1010;//二进制
-let octal: number = 0o744;//八进制s
+let notANumber: number = NaN; //Nan
+let num: number = 123; //普通数字
+let infinityNumber: number = Infinity; //无穷大
+let decimal: number = 6; //十进制
+let hex: number = 0xf00d; //十六进制
+let binary: number = 0b1010; //二进制
+let octal: number = 0o744; //八进制s
 ```
 
 ### boolean
+
 ```ts
-let booleand: boolean = true //可以直接使用布尔值
- 
-let booleand2: boolean = Boolean(1) //也可以通过函数返回布尔值
+let booleand: boolean = true; //可以直接使用布尔值
+
+let booleand2: boolean = Boolean(1); //也可以通过函数返回布尔值
 ```
 
 注意，使用构造函数 Boolean 创造的对象不是布尔值
 
 ```ts
-let createdBoolean: boolean = new Boolean(1)
-//这样会报错 应为事实上 new Boolean() 返回的是一个 Boolean 对象 
-
+let createdBoolean: boolean = new Boolean(1);
+//这样会报错 应为事实上 new Boolean() 返回的是一个 Boolean 对象
 ```
 
 如果想通过构造函数获取布尔值，应该按照如下写法
+
 ```ts
-let createdBoolean: Boolean = new Boolean(1)
+let createdBoolean: Boolean = new Boolean(1);
 ```
+
 ### null
 
 ```ts
-let n: null = null;//定义null
+let n: null = null; //定义null
 ```
 
 ### undefined
-```ts
-let u: undefined = undefined;//定义undefined
 
+```ts
+let u: undefined = undefined; //定义undefined
 ```
+
 ### void
 
 JavaScript 没有空值（Void）的概念，在 TypeScript 中，可以用 void 表示没有任何返回值的函数
 
 ```ts
 function voidFn(): void {
-    console.log('test void')
+  console.log("test void");
 }
 ```
 
@@ -132,30 +135,31 @@ function voidFn(): void {
 
 any 表示任意类型，unknown 表示未知类型
 
-
 ```ts
 let a: any = 123;
-a = 'abc';
+a = "abc";
 ```
 
 ```ts
 let b: unknown = 123;
-b = 'abc';
+b = "abc";
 ```
 
 any 与 unknown 的区别？
 （）
 （2）属性方法的调用
+
 ```ts
 // 如果是any类型在对象没有这个属性的时候还在获取是不会报错的
-let obj:any = {b:1}
-obj.a
- 
+let obj: any = { b: 1 };
+obj.a;
+
 // 如果是unknow 是不能调用属性和方法
-let obj:unknown = {b:1,ccc:():number=>213}
-obj.b
-obj.ccc()
+let obj: unknown = { b: 1, ccc: (): number => 213 };
+obj.b;
+obj.ccc();
 ```
+
 ### never
 
 never 表示的是那些永不存在的值的类型。
@@ -163,6 +167,30 @@ never 表示的是那些永不存在的值的类型。
 ```ts
 // 返回never的函数必须存在无法达到的终点
 function error(message: string): never {
-    throw new Error(message);
+  throw new Error(message);
 }
 ```
+
+### symbol
+
+## 引用类型
+
+### {} or object
+
+```ts
+let obj: {} = {};
+let obj2: object = {};
+let obj3: object = { a: 1 };
+```
+
+Object vs {} vs object
+
+### [] or Array
+
+## 函数类型
+
+### function
+
+### class
+
+## 联合类型

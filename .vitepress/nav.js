@@ -43,6 +43,7 @@ export default [
   {
     text: "后端开发",
     items: [
+      { text: "编程哲学", link: "/RD/philosophy/" },
       { text: "NODE", link: "/RD/node/" },
       { text: "JAVA", link: "/RD/java/" },
       { text: "Python", link: "/RD/python/" },

@@ -136,8 +136,9 @@ export default {
       items: [
         { text: "TypeScript", link: "/FE/typescript/" },
         { text: "类型", link: "/FE/typescript/core/type" },
-        { text: "装饰器", link: "/FE/typescript/core/decorator" },
+        { text: "函数", link: "/FE/typescript/core/functions" },
         { text: "类", link: "/FE/typescript/core/class" },
+        { text: "装饰器", link: "/FE/typescript/core/decorator" },
       ],
     },
   ],

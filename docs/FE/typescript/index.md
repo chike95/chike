@@ -4,11 +4,36 @@
 
 在线调试：<https://www.typescriptlang.org/zh/play?#code/Q>
 
-小满TS：<https://www.bilibili.com/video/BV1wR4y1377K/>
+小满 TS：<https://www.bilibili.com/video/BV1wR4y1377K/>
 
 小满笔记：<https://blog.csdn.net/qq1195566313/category_11559497.html>
 
+大前端笔记：<https://front-end.toimc.com/notes-page/basic/ts/>
+
+## 理论基础
+
+### 什么是 TypeScript
+
+TypeScript 是由微软开发的开源、跨平台的编程语言。它是 JavaScript 的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。
+
+TypeScript 设计目标是开发大型应用，它可以编译成纯 JavaScript，编译出来的 JavaScript 可以运行在任何浏览器上。
+
+TypeScript 增加了一些语法，让开发者可以很容易地使用这些语法来构建大型应用。
+
+TypeScript 提供最新的和不断发展的 JavaScript 特性，包括那些来自 2015 年的 ECMAScript 和未来的提案中的特性，比如异步功能和 Decorators，以帮助建立健壮的组件。
+
+### 为什么使用 TypeScript
+
+TypeScript 增加了代码的可读性和可维护性。
+
+类型检测 利于团队协助
+
+动态输入 自动推导 利于 IDE 提升开发效率
+
+## 快速入门
+
 ### 安装运行
+
 ```bash
 lxm18@lxm_hp MINGW64 /d/projectTest/xiaoman-ts
 $ npm i typescript -g
@@ -20,34 +45,45 @@ $ tsc -v
 Version 5.4.5
 
 lxm18@lxm_hp MINGW64 /d/projectTest/xiaoman-ts
-$ tsc index.ts 
+$ tsc index.ts
 
 lxm18@lxm_hp MINGW64 /d/projectTest/xiaoman-ts
 $ nodemon index.js
 ```
 
+上方的例子分为了两步（先转换在运行），可以通过 npm（ts-node），来进行合并操作：
+
+```bash
+$ npm install ts-node -g
+# 直接进行运行
+$ ts-node demo.ts
+```
+
 ### 配置文件
+
 执行以下命令创建配置项: tsconfig.json
+
 ```bash
 tsc --init
 ```
 
 然后执行以下命令使用配置项的定义进行监测
+
 ```bash
 tsc -w
 ```
 
-配置	说明
+配置 说明
 
-noImplicitAny	禁止使用隐含的 any 类型，如函数参数没有设置具体类型
+noImplicitAny 禁止使用隐含的 any 类型，如函数参数没有设置具体类型
 
-strictNullChecks	开启时不否允许将 null、undefined 赋值给其他类型比如字符串
+strictNullChecks 开启时不否允许将 null、undefined 赋值给其他类型比如字符串
 
-target	转换成 JS 的版本
+target 转换成 JS 的版本
 
-strict	是否严格模式执行
+strict 是否严格模式执行
 
-module	使用的模块系统
+module 使用的模块系统
 
 类型断言
 
@@ -68,8 +104,6 @@ const result = numArr.find((item) => item > 2) as number;
 
 result * 5; // 报错: 'result' is possibly 'undefined'.
 ```
-
-
 
 ```js
 // 限制值类型
