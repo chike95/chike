@@ -338,12 +338,20 @@ export default {
 
   "/RD/node/nest/": [
     {
-      text: "核心概念",
+      text: "开发哲学",
       collapsed: false,
       items: [
         { text: "快速入门", link: "/RD/node/nest/" },
         { text: "项目规范", link: "/RD/node/nest/specification" },
         { text: "高效开发", link: "/RD/node/nest/efficient" },
+        { text: "通用框架", link: "/RD/node/nest/common" },
+      ],
+    },
+    {
+      text: "核心概念",
+      collapsed: false,
+      items: [
+        { text: "快速入门", link: "/RD/node/nest/" },
         { text: "CLI", link: "/RD/node/nest/cli" },
         { text: "控制器", link: "/RD/node/nest/controllers" },
         { text: "提供者", link: "/RD/node/nest/providers" },

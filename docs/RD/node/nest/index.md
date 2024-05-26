@@ -139,6 +139,10 @@ npm 地址：<https://www.npmjs.com/package/reflect-metadata>
 
 ## 项目架构
 
+![alt text](img/image-24.png)
+
+![alt text](img/image-25.png)
+
 ### 架构分层
 
 ![alt text](img/image-16.png)
@@ -170,6 +174,11 @@ Data Transter Object 数据传输对象
 Data Access Object 数据访问对象
 
 <img src="./img/image-21.png" width="450" height="250" >
+
+<img src="./img/image-22.png" width="600" height="300" >
+
+<img src="./img/image-23.png" width="600" height="300" >
+
 
 ## 目录结构
 
