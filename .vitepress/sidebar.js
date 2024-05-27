@@ -632,20 +632,12 @@ export default {
       ],
     },
     {
-      text: "后端开发",
+      text: "项目开发",
       collapsed: false,
       items: [
-        { text: "混沌领域", link: "/practice/zhenpath/backend/chaos" },
-        { text: "后端架构", link: "/practice/zhenpath/backend/framework" },
-        { text: "数据库结构设计", link: "/practice/zhenpath/backend/database" },
-      ],
-    },
-    {
-      text: "前端开发",
-      collapsed: false,
-      items: [
-        { text: "混沌领域", link: "/practice/zhenpath/frontend/chaos.md" },
-        { text: "前端架构", link: "/practice/zhenpath/frontend/framework" },
+        { text: "架构设计", link: "/practice/zhenpath/project/framework" },
+        { text: "环境准备", link: "/practice/zhenpath/project/setup" },
+        { text: "项目部署", link: "/practice/zhenpath/project/deploy" },
       ],
     },
     {

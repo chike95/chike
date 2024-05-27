@@ -1,19 +1,16 @@
-# 前端架构
+# 架构设计
 
-## 技术栈
+## 后端架构
+
+### 技术栈
 
 - 语言：typescript
-- 前端框架 Vue
-- 组件库 Ant Design of Vue
 
-### 前台系统
+- 框架：nestjs
 
-- SSR 框架 NuxtJS
-- CSS ：tailwind
+- 持久化：redis、mysql
 
-### 后台系统
-
-- vben-admin-vue
+- 环境：docker
 
 ```ts
 import { NestFactory } from "@nestjs/core";
@@ -48,3 +45,27 @@ class GlobalExceptionFilter implements ExceptionFilter {
   }
 }
 ```
+
+### 代码规范
+
+## 前台系统
+
+### 技术栈
+
+- 语言：typescript
+- 前端框架： Vue
+- 组件库： Ant Design of Vue
+- SSR 框架： NuxtJS
+- CSS ：tailwind
+
+## 后台系统
+
+### 技术栈
+
+- 语言：typescript
+- 框架：Vue
+- 模板：vben-admin-vue
+
+
+
+
