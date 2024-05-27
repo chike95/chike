@@ -341,7 +341,7 @@ export default {
       text: "开发哲学",
       collapsed: false,
       items: [
-        { text: "快速入门", link: "/RD/node/nest/" },
+        { text: "核心概念", link: "/RD/node/nest/" },
         { text: "项目规范", link: "/RD/node/nest/specification" },
         { text: "高效开发", link: "/RD/node/nest/efficient" },
         { text: "通用框架", link: "/RD/node/nest/common" },
@@ -351,7 +351,7 @@ export default {
       text: "核心概念",
       collapsed: false,
       items: [
-        { text: "快速入门", link: "/RD/node/nest/" },
+        { text: "快速开始", link: "/RD/node/nest/quickstart" },
         { text: "CLI", link: "/RD/node/nest/cli" },
         { text: "控制器", link: "/RD/node/nest/controllers" },
         { text: "提供者", link: "/RD/node/nest/providers" },
@@ -586,6 +586,7 @@ export default {
     { text: "上海金鼎", link: "/work/logs/jinding/" },
     { text: "新天地", link: "/work/logs/xintiandi/" },
     { text: "泰康", link: "/work/logs/taikang/240325" },
+    { text: "昆山足球场", link: "/work/logs/ks/" },
     { text: "滨州体育中心", link: "/work/logs/binzhou/240402" },
     { text: "宝武裂缝监测", link: "/work/logs/baowu/240325" },
     { text: "海南三亚游泳馆", link: "/work/logs/hainan/natatorium" },
@@ -625,7 +626,6 @@ export default {
         { text: "创意和概念", link: "/practice/zhenpath/ideas.md" },
         { text: "调研和分析", link: "/practice/zhenpath/survey.md" },
         { text: "规划和设计", link: "/practice/zhenpath/design.md" },
-        { text: "技术开发", link: "/practice/zhenpath/development.md" },
         { text: "运营和推广", link: "/practice/zhenpath/operate.md" },
         { text: "更新和改进", link: "/practice/zhenpath/optimize.md" },
         { text: "社区管理", link: "/practice/zhenpath/manage.md" },
@@ -635,8 +635,8 @@ export default {
       text: "后端开发",
       collapsed: false,
       items: [
-        { text: "混沌领域", link: "/practice/zhenpath/backend/chaos.md" },
-        { text: "环境准备", link: "/practice/zhenpath/backend/setup.md" },
+        { text: "混沌领域", link: "/practice/zhenpath/backend/chaos" },
+        { text: "后端架构", link: "/practice/zhenpath/backend/framework" },
         { text: "数据库结构设计", link: "/practice/zhenpath/backend/database" },
       ],
     },
@@ -645,7 +645,7 @@ export default {
       collapsed: false,
       items: [
         { text: "混沌领域", link: "/practice/zhenpath/frontend/chaos.md" },
-        { text: "环境准备", link: "/practice/zhenpath/frontend/setup.md" },
+        { text: "前端架构", link: "/practice/zhenpath/frontend/framework" },
       ],
     },
     {

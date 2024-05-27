@@ -60,6 +60,12 @@ netstat -tuln | grep 8081
 
   ![alt text](img/image.png)
 
+### 添加执行权限
+
+```bash
+chmod +x xxx.sh
+```
+
 ## 文件处理
 
 ### 创建文件
