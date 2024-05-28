@@ -1,5 +1,18 @@
 export default {
+  /******************************* 物联网 ************************************/
+  "/iot/": [
+    {
+      text: "物联网导论",
+      //   collapsed: true,
+      items: [
+        { text: "概述", link: "/iot/" },
+        { text: "感知识别", link: "/iot/perception" },
+      ],
+    },
+  ],
   /******************************* 电子工程师 ************************************/
+
+
   "/EE/comm/": [
     {
       text: "通信",
@@ -475,7 +488,6 @@ export default {
       text: "分类：振弦式",
       collapsed: false,
       items: [
-        { text: "振弦", link: "/work/ysb/vibratingWire/" },
         { text: "传感器", link: "/work/ysb/vibratingWire/01-sensor" },
         { text: "采集仪", link: "/work/ysb/vibratingWire/02-instrument" },
         { text: "程序开发", link: "/work/ysb/vibratingWire/03-software" },
@@ -589,7 +601,6 @@ export default {
     { text: "昆山足球场", link: "/work/logs/ks/" },
     { text: "滨州体育中心", link: "/work/logs/binzhou/240402" },
     { text: "宝武裂缝监测", link: "/work/logs/baowu/240325" },
-    { text: "海南三亚游泳馆", link: "/work/logs/hainan/natatorium" },
     { text: "vivo 全球 AI 研发中心", link: "/work/logs/vivo/240325" },
   ],
 
@@ -606,6 +617,7 @@ export default {
       ],
     },
   ],
+
   "/thought/zhuangzi/": [
     {
       text: "《庄子·内七篇》",
@@ -617,6 +629,9 @@ export default {
       ],
     },
   ],
+
+
+
   "/practice/zhenpath/": [
     {
       text: "实践·真途",

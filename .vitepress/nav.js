@@ -1,5 +1,15 @@
 export default [
   {
+    text: "物联网",
+    items: [
+      { text: "导论", link: "/iot/" },
+      { text: "C/C++", link: "/EE/C/" },
+      { text: "元器件", link: "/EE/components/" },
+      { text: "开发板", link: "/EE/DB/" },
+      { text: "开发环境", link: "/EE/dev/" },
+    ],
+  },
+  {
     text: "硬件设计",
     items: [
       { text: "通信原理", link: "/EE/comm/" },
