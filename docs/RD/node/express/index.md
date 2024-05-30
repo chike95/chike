@@ -2,13 +2,7 @@
 
 官网：<https://www.expressjs.com.cn/>
 
-
-
-
-
-
-
-## 创建项目
+## 快速上手
 
 ### 手动创建
 
@@ -22,10 +16,10 @@
 > npm init -y
 ```
 
-安装express
+安装 express
 
 ```
-> npm i express 
+> npm i express
 ```
 
 创建项目主文件
@@ -34,21 +28,21 @@
 > touch app.js
 ```
 
-在app.js中写入
+在 app.js 中写入
 
 ```js
-const express = require('express')
+const express = require("express");
 
-const app = express()
+const app = express();
 
-app.get('/', (req, res) => {
-    console.log(req.url);
-    res.send('hello world')
-})
+app.get("/", (req, res) => {
+  console.log(req.url);
+  res.send("hello world");
+});
 
 app.listen(3006, () => {
-    console.log('running: 127.0.0.1:3006');
-})
+  console.log("running: 127.0.0.1:3006");
+});
 ```
 
 启动项目
@@ -57,7 +51,7 @@ app.listen(3006, () => {
 > node app.js
 ```
 
-访问localhost:3000
+访问 localhost:3000
 
 ### 工具生成
 
@@ -90,21 +84,21 @@ express-server
     |		|- layout.pug
     |- app.js
     |- package-lock.json
-    |- package.json          
+    |- package.json
 
 ```
 
 其中：
 
-app.js是项目主文件；
+app.js 是项目主文件；
 
-views目录用于存放页面文件；
+views 目录用于存放页面文件；
 
-routes目录用于存放路由文件；
+routes 目录用于存放路由文件；
 
-public用于存放静态文件；
+public 用于存放静态文件；
 
-bin中的www是项目的启动文件；
+bin 中的 www 是项目的启动文件；
 
 启动项目
 
@@ -121,10 +115,9 @@ bin中的www是项目的启动文件；
 如果页面空白，可能是端口占用，修改 ./bin/www 即可
 
 ```js
-var port = normalizePort(process.env.PORT || '3006');
-app.set('port', port);
+var port = normalizePort(process.env.PORT || "3006");
+app.set("port", port);
 ```
-
 
 ## 基本使用
 
@@ -133,47 +126,47 @@ app.set('port', port);
 app.js
 
 ```js
-const express = require('express')
-const fs = require('fs')
-const { promisify } = require('util')
+const express = require("express");
+const fs = require("fs");
+const { promisify } = require("util");
 
-const readFile = promisify(fs.readFile)
+const readFile = promisify(fs.readFile);
 
-const app = express()
+const app = express();
 
-app.get('/', async function (req, res) {
-    let back = await readFile('./db.json', 'utf8')
-    try {
-        let back = await readFile('./db.json', 'utf8')
-        const obj = JSON.parse(back)
-        res.send(obj.users)
-    } catch (error) {
-        res.status(500).json({ error })
-    }
-})
+app.get("/", async function (req, res) {
+  let back = await readFile("./db.json", "utf8");
+  try {
+    let back = await readFile("./db.json", "utf8");
+    const obj = JSON.parse(back);
+    res.send(obj.users);
+  } catch (error) {
+    res.status(500).json({ error });
+  }
+});
 
 app.listen(3006, () => {
-    console.log('running: 127.0.0.1:3006');
-})
+  console.log("running: 127.0.0.1:3006");
+});
 ```
 
 db.json
 
 ```json
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "John",
-            "email": "john@gmail.com"
-        },
-        {
-            "id": 2,
-            "name": "Doe",
-            "email": "doe@gmail.com"
-        }
-    ],
-    "video": []
+  "users": [
+    {
+      "id": 1,
+      "name": "John",
+      "email": "john@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Doe",
+      "email": "doe@gmail.com"
+    }
+  ],
+  "video": []
 }
 ```
 
@@ -183,10 +176,4 @@ db.json
 
 ### 添加内容
 
-
-
 ### 删除内容
-
-
-
-

@@ -1,6 +1,6 @@
 # 物联网概述
 
-<img src="./img/image-1.png" width="300" height="600" >
+<img src="./img/image-4.png" width="300" height="600" >
 
 物理世界的联网需求和信息世界的扩展需求催生出了一类新型网络——物联网（Internet of Things，IoT）
 

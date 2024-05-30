@@ -10,6 +10,48 @@ export default {
       ],
     },
   ],
+  "/iot/computer/": [
+    {
+      text: "计算机科学",
+      //   collapsed: true,
+      items: [
+        { text: "概述", link: "/iot/computer/philosophy/" },
+        { text: "计算机组成原理", link: "/iot/perception" },
+        { text: "操作系统", link: "/iot/perception" },
+        { text: "计算机网络", link: "/iot/perception" },
+      ],
+    },
+    {
+      text: "组成原理",
+      //   collapsed: true,
+      items: [
+        { text: "概述", link: "/iot/computer/composition/" },
+        { text: "计算机组成原理", link: "/iot/perception" },
+        { text: "操作系统", link: "/iot/perception" },
+        { text: "计算机网络", link: "/iot/perception" },
+      ],
+    },
+    {
+      text: "操作系统",
+      //   collapsed: true,
+      items: [
+        { text: "概述", link: "/iot/computer/os/" },
+        { text: "计算机组成原理", link: "/iot/perception" },
+        { text: "操作系统", link: "/iot/perception" },
+        { text: "计算机网络", link: "/iot/perception" },
+      ],
+    },
+    {
+      text: "网络",
+      //   collapsed: true,
+      items: [
+        { text: "概述", link: "/iot/computer/net/" },
+        { text: "计算机组成原理", link: "/iot/perception" },
+        { text: "操作系统", link: "/iot/perception" },
+        { text: "计算机网络", link: "/iot/perception" },
+      ],
+    },
+  ],
   /******************************* 电子工程师 ************************************/
 
 
@@ -309,6 +351,12 @@ export default {
   ],
 
   "/RD/node/express/": [
+    {
+      text: "设计思想",
+      collapsed: false,
+      items: [{ text: "概述", link: "/RD/node/express/philosophy/" },
+      { text: "架构设计", link: "/RD/node/express/" }],
+    },
     {
       text: "核心概念",
       collapsed: false,

@@ -3,10 +3,12 @@ export default [
     text: "物联网",
     items: [
       { text: "导论", link: "/iot/" },
-      { text: "C/C++", link: "/EE/C/" },
-      { text: "元器件", link: "/EE/components/" },
-      { text: "开发板", link: "/EE/DB/" },
-      { text: "开发环境", link: "/EE/dev/" },
+      { text: "计算机基础", link: "/iot/computer/" },
+      { text: "编程语言", link: "/iot/program/" },
+      { text: "通信原理", link: "/EE/DB/" },
+      { text: "信号处理", link: "/EE/dev/" },
+      { text: "电路原理", link: "/EE/dev/" },
+      { text: "单片机原理", link: "/EE/dev/" },
     ],
   },
   {
@@ -17,6 +19,7 @@ export default [
       { text: "元器件", link: "/EE/components/" },
       { text: "开发板", link: "/EE/DB/" },
       { text: "开发环境", link: "/EE/dev/" },
+      { text: "开发工具", link: "/EE/dev/" },
     ],
   },
   {
@@ -77,6 +80,17 @@ export default [
       { text: "传感设备", link: "/work/devices/" },
       { text: "程序分析", link: "/work/software/" },
       { text: "项目日志", link: "/work/logs/" },
+    ],
+  },
+  {
+    text: "科学",
+    items: [
+      { text: "艺术", link: "/work/software/" },
+      { text: "文学", link: "/work/devices/" },
+      { text: "数学", link: "/work/ysb/" },
+      { text: "物理", link: "/work/youren/" },
+      { text: "化学", link: "/work/youren/" },
+      { text: "生物", link: "/work/youren/" },
     ],
   },
   {
