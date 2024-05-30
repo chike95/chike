@@ -5,6 +5,7 @@ export default [
       { text: "导论", link: "/iot/" },
       { text: "计算机基础", link: "/iot/computer/" },
       { text: "编程语言", link: "/iot/program/" },
+      { text: "数据结构", link: "/EE/DB/" },
       { text: "通信原理", link: "/EE/DB/" },
       { text: "信号处理", link: "/EE/dev/" },
       { text: "电路原理", link: "/EE/dev/" },
