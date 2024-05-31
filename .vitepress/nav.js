@@ -2,22 +2,46 @@ export default [
   {
     text: "物联网",
     items: [
-      { text: "导论", link: "/iot/" },
-      { text: "计算机基础", link: "/iot/computer/" },
-      { text: "编程语言", link: "/iot/program/" },
-      { text: "数据结构", link: "/EE/DB/" },
-      { text: "通信原理", link: "/EE/DB/" },
-      { text: "信号处理", link: "/EE/dev/" },
-      { text: "电路原理", link: "/EE/dev/" },
-      { text: "单片机原理", link: "/EE/dev/" },
+      {
+        text: "基础理论",
+        items: [
+          { text: "计算机", link: "/iot/computer/" },
+          { text: "编程语言", link: "/iot/program/" },
+          { text: "通信原理", link: "/EE/DB/" },
+          { text: "电路原理", link: "/EE/dev/" },
+        ]
+      },
+      {
+        text: "软件工程",
+        items: [
+          { text: "软件工程", link: "/EE/DB/" },
+          { text: "算法", link: "/EE/DB/" },
+          { text: "数据结构", link: "/EE/DB/" },
+        ]
+      },
+      {
+        text: "电子工程",
+        items: [
+          { text: "信号处理", link: "/EE/dev/" },
+          { text: "单片机", link: "/EE/DB/" },
+          { text: "传感器", link: "/EE/DB/" },
+        ]
+      },
+      {
+        text: "电气工程",
+        items: [
+          { text: "电工技术", link: "/EE/dev/" },
+          { text: "PLC编程", link: "/EE/dev/" },
+          { text: "自动控制原理", link: "/EE/DB/" },
+        ]
+      },
     ],
   },
   {
     text: "硬件设计",
     items: [
-      { text: "通信原理", link: "/EE/comm/" },
       { text: "C/C++", link: "/EE/C/" },
-      { text: "元器件", link: "/EE/components/" },
+      { text: "电子器件", link: "/EE/components/" },
       { text: "开发板", link: "/EE/DB/" },
       { text: "开发环境", link: "/EE/dev/" },
       { text: "开发工具", link: "/EE/dev/" },

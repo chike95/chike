@@ -16,9 +16,9 @@ export default {
       //   collapsed: true,
       items: [
         { text: "概述", link: "/iot/computer/philosophy/" },
-        { text: "计算机组成原理", link: "/iot/perception" },
-        { text: "操作系统", link: "/iot/perception" },
-        { text: "计算机网络", link: "/iot/perception" },
+        { text: "组成篇", link: "/iot/perception" },
+        { text: "计算篇", link: "/iot/perception" },
+        { text: "实战篇", link: "/iot/perception" },
       ],
     },
     {
@@ -26,9 +26,9 @@ export default {
       //   collapsed: true,
       items: [
         { text: "概述", link: "/iot/computer/composition/" },
-        { text: "计算机组成原理", link: "/iot/perception" },
-        { text: "操作系统", link: "/iot/perception" },
-        { text: "计算机网络", link: "/iot/perception" },
+        { text: "组成篇", link: "/iot/computer/composition/01" },
+        { text: "计算篇", link: "/iot/computer/composition/02" },
+        { text: "实战篇", link: "/iot/computer/composition/03" },
       ],
     },
     {
@@ -36,9 +36,10 @@ export default {
       //   collapsed: true,
       items: [
         { text: "概述", link: "/iot/computer/os/" },
-        { text: "计算机组成原理", link: "/iot/perception" },
-        { text: "操作系统", link: "/iot/perception" },
-        { text: "计算机网络", link: "/iot/perception" },
+        { text: "基本功能", link: "/iot/computer/os/01" },
+        { text: "Linux系统", link: "/iot/computer/os/02" },
+        { text: "进阶知识", link: "/iot/computer/os/03" },
+        { text: "项目实战", link: "/iot/computer/os/04" },
       ],
     },
     {
@@ -46,10 +47,11 @@ export default {
       //   collapsed: true,
       items: [
         { text: "概述", link: "/iot/computer/net/" },
-        { text: "计算机组成原理", link: "/iot/perception" },
-        { text: "操作系统", link: "/iot/perception" },
-        { text: "计算机网络", link: "/iot/perception" },
-      ],
+        { text: "网络层", link: "/iot/computer/net/01" },
+        { text: "传输层", link: "/iot/computer/net/02" },
+        { text: "应用层", link: "/iot/computer/net/03" },
+        { text: "项目实战", link: "/iot/computer/net/04" },
+      ]
     },
   ],
   /******************************* 电子工程师 ************************************/
@@ -545,9 +547,10 @@ export default {
       text: "分类：电式",
       collapsed: false,
       items: [
+        { text: "电压采集仪", link: "/work/ysb/explorer/" },
         { text: "地震仪", link: "/work/ysb/seismometer/" },
         { text: "485 倾角仪", link: "/work/ysb/485inclinometer/" },
-        { text: "电压型水准仪", link: "/work/ysb/level/" },
+        { text: "485 水准仪", link: "/work/ysb/level/" },
         { text: "电流型水准仪", link: "/work/ysb/level/level-i" },
       ],
     },
