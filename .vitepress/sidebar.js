@@ -51,11 +51,10 @@ export default {
         { text: "传输层", link: "/iot/computer/net/02" },
         { text: "应用层", link: "/iot/computer/net/03" },
         { text: "项目实战", link: "/iot/computer/net/04" },
-      ]
+      ],
     },
   ],
   /******************************* 电子工程师 ************************************/
-
 
   "/EE/comm/": [
     {
@@ -356,8 +355,10 @@ export default {
     {
       text: "设计思想",
       collapsed: false,
-      items: [{ text: "概述", link: "/RD/node/express/philosophy/" },
-      { text: "架构设计", link: "/RD/node/express/" }],
+      items: [
+        { text: "概述", link: "/RD/node/express/philosophy/" },
+        { text: "架构设计", link: "/RD/node/express/" },
+      ],
     },
     {
       text: "核心概念",
@@ -692,8 +693,6 @@ export default {
     },
   ],
 
-
-
   "/practice/zhenpath/": [
     {
       text: "实践·真途",
@@ -802,6 +801,21 @@ export default {
       ],
     },
   ],
+
+  "/economy/macro/situation/China/": [
+    {
+      text: "宏观指标",
+      items: [
+        {
+          text: "CPI",
+          link: "/economy/macro/situation/China/CPI",
+        },
+        { text: "PPI", link: "/economy/macro/situation/China/PPI" },
+        { text: "PMI", link: "/economy/macro/situation/China/PMI" },
+        { text: "就业率", link: "/economy/macro/situation/China/employment" },
+      ],
+    },
+  ],
   "/economy/macro/crisis/": [
     {
       text: "《关于经济危机的研究》",
@@ -824,6 +838,7 @@ export default {
       ],
     },
   ],
+
   "/economy/macro/situation/Japan/": [
     {
       text: "《日本宏观经济研究》",
@@ -860,21 +875,13 @@ export default {
         { text: "均线系统", link: "/economy/stock/market/average" },
       ],
     },
-  ],
-  "/economy/news/": [
     {
-      text: "《2024年经济要闻》",
-      //   collapsed: true,
+      text: "年度记录",
+      collapsed: false,
       items: [
-        { text: "1月", link: "/economy/news/2024/01" },
-        { text: "3月", link: "/economy/news/2024/03" },
-        { text: "4月", link: "/economy/news/2024/04" },
+        { text: "2024", link: "/economy/stock/year/2024" },
+        { text: "2023", link: "/economy/stock/market/average" },
       ],
-    },
-    {
-      text: "《专题要闻》",
-      //   collapsed: true,
-      items: [{ text: "俄乌战争", link: "/economy/news/2024/01" }],
     },
   ],
 };
