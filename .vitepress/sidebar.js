@@ -435,14 +435,25 @@ export default {
   ],
 
   "/RD/java": [
+    { text: "知识体系", link: "/RD/java/knowledge" },
+    { text: "基础语法", link: "/RD/java/grammar/" },
+    { text: "面向对象", link: "/RD/java/OO/" },
+
+    { text: "MyBatis", link: "/RD/java/OO/" },
+    { text: "IDEA", link: "/RD/java/idea/" },
     {
-      text: "核心概念",
+      text: "框架",
       collapsed: false,
       items: [
-        { text: "快速入门", link: "/RD/java/01_config" },
-        { text: "CLI", link: "" },
+        { text: "Express", link: "/RD/node/express/" },
+        { text: "SSM", link: "/RD/node/koa/" },
+        { text: "Spring", link: "/RD/java/spring/" },
       ],
     },
+  ],
+
+  "/RD/javagrammar/": [
+    { text: "基础语法", link: "/RD/java/grammar/" },
     { text: "IDEA", link: "/RD/java/idea/" },
     {
       text: "框架",
