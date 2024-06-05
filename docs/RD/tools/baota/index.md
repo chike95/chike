@@ -15,3 +15,7 @@ bt
 ```bash
 /etc/init.d/bt default
 ```
+
+### 面板密码忘记
+
+<https://blog.csdn.net/dzqxwzoe/article/details/136336999>

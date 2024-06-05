@@ -191,12 +191,26 @@ System.out.println(a & b); // 10
 ```bash
 int num = -5;
 
+// 单分支
+if(num > 0){
+    System.out.println("num 是正数");
+}
+
+// 双分支
 if(num > 0){
     System.out.println("num 是正数");
 } else {
     System.out.println("num 是负数或零");
 }
 
+// 多分支
+if (num > 0) {
+    System.out.println("num是正数");
+} else if (num < 0) {
+    System.out.println("num是负数");
+} else {
+    System.out.println("num是零");
+}
 ```
 
 - 多分支：switch
@@ -237,3 +251,145 @@ System.out.println("今天是" + dayName);
 ```
 
 ### 循环结构
+
+- 条件初始化
+- 条件判断
+- 循环体
+- 迭代
+
+while
+
+```java
+int count = 0;
+
+while (count < 5) {
+    System.out.println("Count: " + count);
+    count++;
+}
+```
+
+for
+
+```java
+// 使用for循环打印数字1到5：
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+
+// 使用for循环迭代遍历数组：
+int[] numbers = {1, 2, 3, 4, 5};
+
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println("Number " + (i+1) + ": " + numbers[i]);
+}
+
+// 使用for-each循环迭代遍历集合元素：
+List<String> fruits = new ArrayList<>();
+fruits.add("Apple");
+fruits.add("Banana");
+fruits.add("Orange");
+
+for (String fruit : fruits) {
+    System.out.println(fruit);
+}
+
+```
+
+## 方法
+
+方法是用于执行特定任务的一段代码。它们允许你将代码块组织成可重复使用的单元。
+
+```java
+public class Example {
+    // 定义一个方法，用于打印Hello World
+    public static void printHelloWorld() {
+        System.out.println("Hello, World!");
+    }
+
+    // 主方法，程序的入口
+    public static void main(String[] args) {
+        // 调用printHelloWorld方法
+        printHelloWorld();
+    }
+}
+```
+
+### 方法重载
+
+```java
+public class MathUtil {
+    // 方法重载：计算两个整数的和
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // 方法重载：计算三个整数的和
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // 方法重载：计算两个浮点数的和
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    // 主方法，程序的入口
+    public static void main(String[] args) {
+        MathUtil math = new MathUtil();
+
+        System.out.println(math.add(2, 3)); // 输出 5
+        System.out.println(math.add(2, 3, 4)); // 输出 9
+        System.out.println(math.add(2.5, 3.7)); // 输出 6.2
+    }
+}
+
+```
+
+方法重载的要求如下：
+
+- 方法名称必须相同：在同一个类中，重载的方法必须具有相同的名称。
+
+- 参数列表必须不同：重载的方法必须具有不同的参数列表，这可以通过参数的数量、类型或者顺序来实现区分。
+
+- 返回类型可以相同也可以不同：重载的方法可以具有相同的返回类型，也可以具有不同的返回类型。但是仅仅通过返回类型的不同是不能构成方法的重载的，因为 Java 编译器不允许仅根据返回类型来区分重载的方法。
+
+- 访问修饰符可以相同也可以不同：重载的方法可以具有相同的或不同的访问修饰符（比如 public、private、protected、default），只要满足其他重载的要求即可。
+
+## 数组
+
+```java
+public class ArrayDemo {
+    public static void main(String[] args) {
+        // 声明和初始化一个整型数组
+        int[] numbers = new int[5];
+
+        // 向数组赋值
+        numbers[0] = 10;
+        numbers[1] = 20;
+        numbers[2] = 30;
+        numbers[3] = 40;
+        numbers[4] = 50;
+
+        // 访问数组元素并打印输出
+        System.out.println("第三个元素是：" + numbers[2]); // 输出 30
+
+        // 使用循环遍历数组并打印输出
+        System.out.print("数组元素分别是：");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+        System.out.println();
+
+        // 声明和初始化一个字符串数组
+        String[] names = {"Alice", "Bob", "Charlie", "David"};
+
+        // 使用增强型for循环遍历数组并打印输出
+        System.out.print("名字列表：");
+        for (String name : names) {
+            System.out.print(name + " ");
+        }
+        System.out.println();
+    }
+}
+
+```

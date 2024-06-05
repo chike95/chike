@@ -438,7 +438,7 @@ export default {
   "/RD/java": [
     { text: "知识体系", link: "/RD/java/knowledge" },
     { text: "基础语法", link: "/RD/java/grammar/" },
-    { text: "面向对象", link: "/RD/java/OO/" },
+    { text: "面向对象", link: "/RD/java/grammar/OO" },
 
     { text: "MyBatis", link: "/RD/java/OO/" },
     { text: "IDEA", link: "/RD/java/idea/" },
@@ -502,7 +502,9 @@ export default {
   ],
 
   "/RD/tool": [
+    { text: "Mysql", link: "/RD/tools/mysql/" },
     { text: "Docker", link: "/RD/tools/docker/" },
+    { text: "宝塔面板", link: "/RD/tools/baota/" },
     {
       text: "核心概念",
       collapsed: false,

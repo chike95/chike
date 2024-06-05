@@ -5,34 +5,36 @@ export default [
       {
         text: "基础理论",
         items: [
-          { text: "计算机", link: "/iot/computer/" },
-          { text: "编程语言", link: "/iot/program/" },
-          { text: "通信原理", link: "/EE/DB/" },
-          { text: "电路原理", link: "/EE/dev/" },
+          { text: "《计算机基础》", link: "/iot/computer/" },
+          { text: "《编程语言》", link: "/iot/program/" },
+          { text: "《通信原理》", link: "/EE/DB/" },
+          { text: "《电路原理》", link: "/EE/dev/" },
         ]
       },
       {
         text: "软件工程",
         items: [
-          { text: "软件工程", link: "/EE/DB/" },
-          { text: "算法", link: "/EE/DB/" },
-          { text: "数据结构", link: "/EE/DB/" },
+          { text: "《软件工程》", link: "/EE/DB/" },
+          { text: "《算法》", link: "/EE/DB/" },
+          { text: "《数据结构》", link: "/EE/DB/" },
         ]
       },
       {
         text: "电子工程",
         items: [
-          { text: "信号处理", link: "/EE/dev/" },
-          { text: "单片机", link: "/EE/DB/" },
-          { text: "传感器", link: "/EE/DB/" },
+          { text: "《模拟电路》", link: "/EE/dev/" },
+          { text: "《数字电路》", link: "/EE/dev/" },
+          { text: "《信号处理》", link: "/EE/dev/" },
+          { text: "《单片机》", link: "/EE/DB/" },
+          { text: "《传感器》", link: "/EE/DB/" },
         ]
       },
       {
         text: "电气工程",
         items: [
-          { text: "电工技术", link: "/EE/dev/" },
-          { text: "PLC编程", link: "/EE/dev/" },
-          { text: "自动控制原理", link: "/EE/DB/" },
+          { text: "《电工技术》", link: "/EE/dev/" },
+          { text: "《PLC编程》", link: "/EE/dev/" },
+          { text: "《自动控制原理》", link: "/EE/DB/" },
         ]
       },
     ],
@@ -63,6 +65,7 @@ export default [
         text: "进阶技术",
         items: [
           { text: "VUE", link: "/FE/VUE/" },
+          { text: "React", link: "/FE/React/" },
           { text: "vitepress", link: "/FE/vitepress/" },
           { text: "WEB_3D", link: "/FE/WEB_3D/" },
           { text: "技术集合", link: "/FE/others/" },
@@ -85,6 +88,7 @@ export default [
       { text: "NODE", link: "/RD/node/" },
       { text: "JAVA", link: "/RD/java/" },
       { text: "Python", link: "/RD/python/" },
+      { text: "Rust", link: "/RD/rust/" },
       { text: "工具", link: "/RD/tools/" },
       { text: "常见需求", link: "/RD/business/" },
       {
@@ -92,7 +96,6 @@ export default [
         items: [
           { text: "Linux", link: "/RD/linux/" },
           { text: "Windows", link: "/RD/windows/" },
-          { text: "计算机网络", link: "/RD/net/" },
         ],
       },
     ],
