@@ -858,7 +858,8 @@ export default {
       collapsed: false,
       items: [
         { text: "理论基础", link: "/economy/stock/trend/theory" },
-        { text: "趋势投资的概念", link: "/economy/stock/trend/concept" },
+        { text: "概念定义", link: "/economy/stock/trend/concept" },
+        { text: "技术指标", link: "/economy/stock/trend/indicator" },
       ],
     },
     {
