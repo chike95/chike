@@ -439,6 +439,8 @@ export default {
     { text: "知识体系", link: "/RD/java/knowledge" },
     { text: "基础语法", link: "/RD/java/grammar/" },
     { text: "面向对象", link: "/RD/java/grammar/OO" },
+    { text: "进阶技术", link: "/RD/java/grammar/advance" },
+    { text: "项目实践", link: "/RD/java/grammar/practice" },
 
     { text: "MyBatis", link: "/RD/java/OO/" },
     { text: "IDEA", link: "/RD/java/idea/" },

@@ -280,3 +280,139 @@ public class Main {
 多态的三要素:继承、重写、父类引用指向子类对象
 
 多态的好处:提高代码扩展性
+
+
+## 异常处理
+
+### try-catch-finally
+
+![alt text](img/image-13.png)
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 0;
+        int c = 0;
+        try {
+            c = a / b;
+        } catch (ArithmeticException e) {
+            System.out.println("除数不能为0");
+        } finally {
+            System.out.println("finally");
+            // 无论是否发生异常，都会执行finally语句块
+        }
+        System.out.println(c);
+    }
+}
+
+```
+
+### throw/throws
+
+throw 用于在代码块中抛出异常，而 throws 用于声明一个方法可能抛出的异常。
+
+![alt text](img/image-14.png)
+
+
+
+```java
+// 使用 throw 抛出异常
+public class ThrowExample {
+    public static void main(String[] args) {
+        int age = 17;
+        try {
+            if (age < 18) {
+                throw new ArithmeticException("未满18岁，不允许注册。");
+            } else {
+                System.out.println("注册成功！");
+            }
+        } catch (ArithmeticException e) {
+            System.out.println("发生异常：" + e.getMessage());
+        }
+    }
+}
+
+ ```
+
+ ```java
+// 使用 throws 声明方法可能抛出的异常
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class ThrowsExample {
+    public static void main(String[] args) {
+        try {
+            readDataFromFile();
+        } catch (FileNotFoundException e) {
+            System.out.println("发生文件未找到异常：" + e.getMessage());
+        }
+    }
+
+    public static void readDataFromFile() throws FileNotFoundException {
+        FileReader fileReader = new FileReader("test.txt");
+        // 读取文件内容
+    }
+}
+ ```
+     
+## 集合
+
+![alt text](img/image-15.png)
+
+![alt text](img/image-16.png)
+
+### ArrayList
+
+
+```java
+import java.util.ArrayList;
+public class Main {
+    public static void main(String[] args) {
+        // 创建一个整数类型的 ArrayList
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        // 添加元素
+        numbers.add(5);
+        numbers.add(10);
+        numbers.add(15);
+
+        // 获取元素
+        System.out.println("第二个元素是：" + numbers.get(1));
+
+        // 遍历元素
+        for (Integer number : numbers) {
+            System.out.println(number);
+        }
+        // 修改元素
+        numbers.set(2, 20);
+        System.out.println("修改后的 ArrayList：" + numbers);
+
+        // 删除元素
+        numbers.remove(0);
+        System.out.println("删除第一个元素后：" + numbers);
+
+        // 获取元素个数
+        System.out.println("ArrayList 中有 " + numbers.size() + " 个元素");
+
+        // 检查是否包含某个元素
+        System.out.println("ArrayList 是否包含 10：" + numbers.contains(10));
+
+        // 清空 ArrayList
+        numbers.clear();
+        System.out.println("清空后的 ArrayList：" + numbers);
+    }
+}
+```
+
+```bash
+第二个元素是：10
+5
+10
+15
+修改后的 ArrayList：[5, 10, 20]
+删除第一个元素后：[10, 20]
+ArrayList 中有 2 个元素
+ArrayList 是否包含 10：true
+清空后的 ArrayList：[]
+```
