@@ -52,6 +52,25 @@ C0 A8 1E 64 ff ff c8 32 00 00
 
 ### TCP
 
+单位：V
+![alt text](img/d6cd7b94b317ac405766a4c65e4216e.png)
+
+![alt text](img/image-3.png)
+
 ## ToolSoft
 
+![alt text](img/104977dbe44695296ce75952d19d0b7.png)
+
 ## NewExplorer
+
+![alt text](img/cf904ce00466ac42cdfbcf99a1bf6b7.png)
+
+## 计算公式
+
+### 桥式应变计
+
+![alt text](img/image-2.png)
+
+![alt text](img/image-4.png)
+
+![alt text](img/default2-1.png)
