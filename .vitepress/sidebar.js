@@ -808,12 +808,11 @@ export default {
 
   "/economy/macro/situation/China/": [
     {
-      text: "宏观指标",
+      text: "《中国宏观经济学二十五讲》",
       items: [
-        {
-          text: "CPI",
-          link: "/economy/macro/situation/China/CPI",
-        },
+        { text: "中国经济", link: "/economy/macro/situation/China/index" },
+        { text: "供给面分析", link: "/economy/macro/situation/China/supply" },
+        { text: "CPI", link: "/economy/macro/situation/China/CPI" },
         { text: "PPI", link: "/economy/macro/situation/China/PPI" },
         { text: "PMI", link: "/economy/macro/situation/China/PMI" },
         { text: "就业率", link: "/economy/macro/situation/China/employment" },
