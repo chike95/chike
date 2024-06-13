@@ -642,23 +642,20 @@ export default {
         },
       ],
     },
+  ],
+
+  "/work/deploy/": [
+    { text: "双系统配置", link: "/work/deploy/dual-system" },
+    { text: "windows", link: "/work/deploy/windows_env" },
     {
-      text: "项目部署",
-      collapsed: false,
+      text: "ubuntu",
       items: [
-        { text: "windows", link: "/work/software/windows_env" },
-        {
-          text: "ubuntu",
-          items: [
-            { text: "系统安装", link: "/work/software/ubuntu/01_system" },
-            { text: "环境搭建", link: "/work/software/ubuntu/02_dev" },
-            { text: "程序部署", link: "/work/software/ubuntu/03_config" },
-          ],
-        },
+        { text: "系统安装", link: "/work/deploy/ubuntu/01_system" },
+        { text: "环境搭建", link: "/work/deploy/ubuntu/02_dev" },
+        { text: "程序部署", link: "/work/deploy/ubuntu/03_config" },
       ],
     },
   ],
-
   "/work/logs/": [
     { text: "端口分配", link: "/work/logs/port" },
     { text: "武汉阿里", link: "/work/logs/whal/" },

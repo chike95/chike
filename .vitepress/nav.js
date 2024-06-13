@@ -107,6 +107,7 @@ export default [
       { text: "有人物联", link: "/work/youren/" },
       { text: "传感设备", link: "/work/devices/" },
       { text: "程序分析", link: "/work/software/" },
+      { text: "系统部署", link: "/work/deploy/" },
       { text: "项目日志", link: "/work/logs/" },
     ],
   },
