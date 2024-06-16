@@ -440,6 +440,7 @@ export default {
     { text: "基础语法", link: "/RD/java/grammar/" },
     { text: "面向对象", link: "/RD/java/grammar/OO" },
     { text: "进阶技术", link: "/RD/java/grammar/advance" },
+    { text: "开发提效", link: "/RD/java/development/" },
     { text: "项目实践", link: "/RD/java/grammar/practice" },
 
     { text: "MyBatis", link: "/RD/java/OO/" },

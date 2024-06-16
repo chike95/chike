@@ -9,7 +9,7 @@ export default [
           { text: "《编程语言》", link: "/iot/program/" },
           { text: "《通信原理》", link: "/EE/DB/" },
           { text: "《电路原理》", link: "/EE/dev/" },
-        ]
+        ],
       },
       {
         text: "软件工程",
@@ -17,7 +17,7 @@ export default [
           { text: "《软件工程》", link: "/EE/DB/" },
           { text: "《算法》", link: "/EE/DB/" },
           { text: "《数据结构》", link: "/EE/DB/" },
-        ]
+        ],
       },
       {
         text: "电子工程",
@@ -27,7 +27,7 @@ export default [
           { text: "《信号处理》", link: "/EE/dev/" },
           { text: "《单片机》", link: "/EE/DB/" },
           { text: "《传感器》", link: "/EE/DB/" },
-        ]
+        ],
       },
       {
         text: "电气工程",
@@ -35,7 +35,7 @@ export default [
           { text: "《电工技术》", link: "/EE/dev/" },
           { text: "《PLC编程》", link: "/EE/dev/" },
           { text: "《自动控制原理》", link: "/EE/DB/" },
-        ]
+        ],
       },
     ],
   },
@@ -46,6 +46,7 @@ export default [
       { text: "电子器件", link: "/EE/components/" },
       { text: "开发板", link: "/EE/DB/" },
       { text: "开发环境", link: "/EE/dev/" },
+      { text: "拆解维修", link: "/EE/repair/" },
       { text: "开发工具", link: "/EE/dev/" },
     ],
   },
