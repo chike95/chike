@@ -45,3 +45,9 @@ FileZilla 配置
 用户：root
 
 密码：123456
+
+## 硬盘录像机
+
+海康威视；<https://www.hikvision.com/cn/19th-asian-games/digital-video-recorder/>
+
+![alt text](img/9c2cfebdc582404db192b6d96d7bf19.jpg)

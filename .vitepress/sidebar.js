@@ -15,10 +15,7 @@ export default {
       text: "计算机科学",
       //   collapsed: true,
       items: [
-        { text: "概述", link: "/iot/computer/philosophy/" },
-        { text: "组成篇", link: "/iot/perception" },
-        { text: "计算篇", link: "/iot/perception" },
-        { text: "实战篇", link: "/iot/perception" },
+        { text: "导论", link: "/iot/computer/philosophy/" },
       ],
     },
     {
@@ -51,6 +48,17 @@ export default {
         { text: "传输层", link: "/iot/computer/net/02" },
         { text: "应用层", link: "/iot/computer/net/03" },
         { text: "项目实战", link: "/iot/computer/net/04" },
+      ],
+    },
+  ],
+
+  "/iot/communication/": [
+    {
+      text: "通信协议",
+      //   collapsed: true,
+      items: [
+        { text: "Modbus", link: "/iot/communication/" },
+        { text: "串行通信协议", link: "/iot/communication/data" },
       ],
     },
   ],
@@ -93,14 +101,14 @@ export default {
 
   "/EE/DB/": [
     {
-      text: "ESP8266",
+      text: "ESP",
       // collapsed: true,
-      items: [{ text: "TypeScript", link: "/FE/typescript/" }],
+      items: [{ text: "ESP8266", link: "/EE/DB/esp8266" }],
     },
     {
-      text: "STM32F103",
+      text: "STM32",
       // collapsed: true,
-      items: [{ text: "STM32F103", link: "/EE/dev/" }],
+      items: [{ text: "STM32F103", link: "/EE/DB/stm32f103/" }],
     },
   ],
 
@@ -551,6 +559,7 @@ export default {
 
   /******************************* 工作记录 ************************************/
   "/work/ysb/": [
+    { text: "国家标准", link: "/work/ysb/openstd" },
     {
       text: "分类：振弦式",
       collapsed: false,
@@ -583,6 +592,7 @@ export default {
   ],
 
   "/work/devices/": [
+    { text: "farsens", link: "/work/devices/farsens/" },
     { text: "大华摄像头", link: "/work/devices/dahua/camera" },
     { text: "ZH-T08R-14N1", link: "/work/devices/ZH-T08R-14N1/strain-8R" },
     { text: "蒲公英R300路由器", link: "/work/devices/oray/R300" },
@@ -658,6 +668,7 @@ export default {
     },
   ],
   "/work/logs/": [
+    { text: "日志提交", link: "/work/logs/TortoiseSVN" },
     { text: "端口分配", link: "/work/logs/port" },
     { text: "武汉阿里", link: "/work/logs/whal/" },
     { text: "上海金鼎", link: "/work/logs/jinding/" },

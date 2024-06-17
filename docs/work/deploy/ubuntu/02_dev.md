@@ -135,9 +135,7 @@ ssh root@123.206.175.241
 
 ### 2.1.3 反向代理
 
-#### 包管理器安装
-
-#### 手动安装 autossh
+#### 安装 autossh
 
 (1) 下载 autossh 压缩包：
 
@@ -178,6 +176,54 @@ autossh -V
 ```
 
 ![alt text](img/image-1.png)
+
+#### 配置教程
+
+```bash
+SSH反向代理
+
+******** 代理机 ******** <这个已在云服务器123.206.175.241好做>
+# vi /etc/ssh/shhd_config
+...
+GatewayPorts yes
+...
+# service sshd restart
+
+******** 目标机 ******** <这个需要做>
+# ssh-keygen     // 生成密钥对
+# ssh-copy-id root@123.206.175.241     // 公钥发代理机
+# autossh -M 50202 -fCNR '*:50222:127.0.0.1:22' root@123.206.175.241 // 可手动运行测试
+# pkill -3 autossh // 测试后手动关闭反向代理
+
+******** 目标机配置开机自动启动反向代理 ******** <这个需要做>
+# vi /etc/rc.local     // 添加启动项到旧配置rc.local
+<--------------------------
+...
+autossh -M 50202 -fCNR '*:50222:127.0.0.1:22' root@123.206.175.241
+...
+-------------------------->
+# vi /etc/systemd/system/rc-local.service     // 旧配置rc.local在启动任务中启动
+<--------------------------
+...
+[Install]
+WantedBy=multi-user.target
+Alias=rc-local.service
+-------------------------->
+# ln -s /lib/systemd/system/rc.local.service /etc/systemd/system/   // lnk任务到启动目录
+# systemctl start rc-local.service          // 可手动运行该任务测试，关闭同上
+
+******** SSH加通道 ******** <在putty客户机配置，用于测试WEB服务>
+PuTTY 配置 => 连接 => SSH => 通道
+<--------------------------
+源端口 8080
+目的地 127.0.0.1:8080
+本地
+自动
+-------------------------->
+其中"源端口"指运行putty客户端程序的PC端口
+其中"目的地"指远端运行SSH反向代理的目标机IP地址及端口
+后两项固定
+```
 
 #### 配置过程
 

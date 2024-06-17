@@ -2,12 +2,13 @@ export default [
   {
     text: "物联网",
     items: [
+      { text: "面试", link: "/iot/interview/" },
       {
         text: "基础理论",
         items: [
           { text: "《计算机基础》", link: "/iot/computer/" },
-          { text: "《编程语言》", link: "/iot/program/" },
-          { text: "《通信原理》", link: "/EE/DB/" },
+          { text: "《编程思想》", link: "/iot/program/" },
+          { text: "《通信原理》", link: "/iot/communication/" },
           { text: "《电路原理》", link: "/EE/dev/" },
         ],
       },
@@ -27,14 +28,6 @@ export default [
           { text: "《信号处理》", link: "/EE/dev222/" },
           { text: "《单片机》", link: "/EE/DB/" },
           { text: "《传感器》", link: "/EE/DB/" },
-        ],
-      },
-      {
-        text: "电气工程",
-        items: [
-          { text: "《电工技术》", link: "/EE/dev/" },
-          { text: "《PLC编程》", link: "/EE/dev/" },
-          { text: "《自动控制原理》", link: "/EE/DB/" },
         ],
       },
       // {
@@ -93,7 +86,7 @@ export default [
   {
     text: "后端开发",
     items: [
-      { text: "编程哲学", link: "/RD/philosophy/" },
+      { text: "编程哲学", link: "/RD/philosophy" },
       { text: "NODE", link: "/RD/node/" },
       { text: "JAVA", link: "/RD/java/" },
       { text: "Python", link: "/RD/python/" },

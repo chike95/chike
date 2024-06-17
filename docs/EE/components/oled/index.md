@@ -1,4 +1,4 @@
-# OLED显示屏
+# OLED 显示屏
 
 ## esp8266 驱动 OLED
 
@@ -6,14 +6,11 @@
 
 #### 产品信息
 
-在Arduino中安装依赖的库文件，【项目】→【加载库】→【管理库】：
+在 Arduino 中安装依赖的库文件，【项目】→【加载库】→【管理库】：
 
+#### 安装 OLED 驱动库
 
-
-
-#### 安装OLED驱动库
-
-esp8266驱动库
+esp8266 驱动库
 
 esp8266-oled-ssd1306
 
@@ -21,15 +18,12 @@ esp8266-oled-ssd1306
 
 #### 硬件连接
 
-开发板引脚          OLED屏引脚
-
-3.3V                VCC
-
-G (GND)             GND
-
-D1(GPIO5)           SCL
-
-D2(GPIO4)           SDA
+| 开发板引脚 | OLED 屏引脚 |
+| ---------- | :---------: |
+| 3.3V       |     VCC     |
+| G (GND)    |     GND     |
+| D1(GPIO5)  |     SCL     |
+| D2(GPIO4)  |     SDA     |
 
 #### 程序代码
 
@@ -51,15 +45,15 @@ void setup()
   oled.begin(SSD1306_SWITCHCAPVCC,0x3C);
   oled.setTextColor(WHITE);//开像素点发光
   oled.clearDisplay();//清屏
-  
-  oled.setTextSize(1); //设置字体大小  
+
+  oled.setTextSize(1); //设置字体大小
   oled.setCursor(35, 5);//设置显示位置
   oled.println("-yefenglin-");
 
-  oled.setTextSize(2);//设置字体大小  
+  oled.setTextSize(2);//设置字体大小
   oled.setCursor(15, 30);//设置显示位置
   oled.println("OLED TEST");
-  
+
   oled.display(); // 开显示
 }
 
@@ -73,7 +67,4 @@ void loop() {
 
 ![Alt text](./img/oled_test.png)
 
-## ESP8266制作OLED网络时钟
-
-
-
+## ESP8266 制作 OLED 网络时钟
