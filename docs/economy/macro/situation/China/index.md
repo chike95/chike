@@ -5,9 +5,6 @@
 ![alt text](img/image-3.png)
 
 
-
-
-
 ::: info 【中国经济专题】徐高 -《宏观经济学二十五讲：中国视角》——北大国发院课程
 
 课程地址：<https://www.bilibili.com/video/BV1oE411Z7TU/>
