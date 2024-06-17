@@ -12,7 +12,7 @@
 
 5）linux 子系统中安装监测采集，和监测查看的系统。
 
-## 安装步骤
+## 计算机系统
 
 ### WSL 配置
 
@@ -81,6 +81,8 @@ ls /mnt/
 ```
 
 ![alt text](img/image-5.png)
+
+## 远程连接
 
 ### 免密登录
 
@@ -200,7 +202,7 @@ autossh -M 45050 -fCNR '*:40050:127.0.0.1:2222' ubuntu@123.206.175.241 -o Server
 
 ```bash
 Set ws= CreateObject("Wscript.Shell")
-ws.run "wsl -d Ubuntu-18.04 -u root /etc/rc.local", vbhidet
+ws.run "wsl -d Ubuntu-18.04 -u root /etc/rc.local", vbhide
 ```
 
 （2）ubuntu 配置自启文件
@@ -284,6 +286,55 @@ export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 (4) 执行 java -version 查看 java 版本
 
 ### Mysql
+
+(1) 安装
+
+```sh
+# 安装mysql服务
+sudo apt-get install mysql-server
+# 安装客户端
+sudo apt install mysql-client
+# 安装依赖
+sudo apt install libmysqlclient-dev
+# 检查状态
+sudo netstat -tap | grep mysql
+```
+
+(2) 查看已有账号
+
+```sh
+sudo cat /etc/mysql/debian.cnf
+```
+
+![alt text](img/image-16.png)
+
+(3) 登录
+
+```sh
+mysql -udebian-sys-maint -pUeZ2cqlXjvRe8zsL
+```
+
+(4) 查看数据库
+
+```sh
+show databases;
+```
+
+(5) 使用 ‘mysql’这个库
+
+```sh
+use mysql;
+update user set authentication_string=PASSWORD("自定义密码") where user='root';
+update user set plugin="mysql_native_password";
+flush privileges;
+quit;
+```
+
+(6) 重启
+
+```sh
+/etc/init.d/mysql restart
+```
 
 ## 项目应用
 

@@ -7,9 +7,9 @@ export default [
         items: [
           { text: "《计算机基础》", link: "/iot/computer/" },
           { text: "《编程语言》", link: "/iot/program/" },
-          { text: "《通信原理》", link: "/EE/DB/" },
-          { text: "《电路原理》", link: "/EE/dev/" },
-        ]
+          { text: "《通信原理》", link: "/iot/communication/" },
+          { text: "《电路原理》", link: "/EE/dev1/" },
+        ],
       },
       {
         text: "软件工程",
@@ -17,26 +17,26 @@ export default [
           { text: "《软件工程》", link: "/EE/DB/" },
           { text: "《算法》", link: "/EE/DB/" },
           { text: "《数据结构》", link: "/EE/DB/" },
-        ]
+        ],
       },
       {
         text: "电子工程",
         items: [
-          { text: "《模拟电路》", link: "/EE/dev/" },
-          { text: "《数字电路》", link: "/EE/dev/" },
-          { text: "《信号处理》", link: "/EE/dev/" },
+          { text: "《模拟电路》", link: "/EE/dev2/" },
+          { text: "《数字电路》", link: "/EE/dev22/" },
+          { text: "《信号处理》", link: "/EE/dev222/" },
           { text: "《单片机》", link: "/EE/DB/" },
           { text: "《传感器》", link: "/EE/DB/" },
-        ]
+        ],
       },
-      {
-        text: "电气工程",
-        items: [
-          { text: "《电工技术》", link: "/EE/dev/" },
-          { text: "《PLC编程》", link: "/EE/dev/" },
-          { text: "《自动控制原理》", link: "/EE/DB/" },
-        ]
-      },
+      // {
+      //   text: "电气工程",
+      //   items: [
+      //     { text: "《电工技术》", link: "/EE/dev/" },
+      //     { text: "《PLC编程》", link: "/EE/dev/" },
+      //     { text: "《自动控制原理》", link: "/EE/DB/" },
+      //   ]
+      // },
     ],
   },
   {
@@ -44,8 +44,21 @@ export default [
     items: [
       { text: "C/C++", link: "/EE/C/" },
       { text: "电子器件", link: "/EE/components/" },
-      { text: "开发板", link: "/EE/DB/" },
-      { text: "开发环境", link: "/EE/dev/" },
+      {
+        text: "开发板",
+        items: [
+          { text: "51单片机", link: "/EE/DB/51/" },
+          { text: "STM32", link: "/EE/DB/stm32f103/" },
+          { text: "esp8266", link: "/EE/DB/esp8266" },
+        ],
+      },
+      {
+        text: "开发环境",
+        items: [
+          { text: "Keil", link: "/EE/dev/keil/" },
+          { text: "Arduino", link: "/EE/dev/arduino/" },
+        ],
+      },
       { text: "开发工具", link: "/EE/dev/" },
     ],
   },
@@ -76,7 +89,7 @@ export default [
         items: [
           { text: "Chrome", link: "/FE/chrome/" },
           { text: "VSCode", link: "/FE/tools/vscode/" },
-          { text: "其它工具", link: "/FE/tools/vscode/" },
+          { text: "其它工具", link: "/FE/tools/" },
         ],
       },
     ],
@@ -107,7 +120,7 @@ export default [
       { text: "有人物联", link: "/work/youren/" },
       { text: "传感设备", link: "/work/devices/" },
       { text: "程序分析", link: "/work/software/" },
-      { text: "系统部署", link: "/work/deploy/" },
+      { text: "系统部署", link: "/work/deploy/dual-system" },
       { text: "项目日志", link: "/work/logs/" },
     ],
   },
@@ -177,15 +190,15 @@ export default [
           { text: "新闻", link: "/economy/news/" },
         ],
       },
-      {
-        text: "图书",
-        items: [
-          {
-            text: "《两次全球大危机的比较研究》",
-            link: "/economy/book/两次全球大危机的比较研究/",
-          },
-        ],
-      },
+      // {
+      //   text: "图书",
+      //   items: [
+      //     {
+      //       text: "《两次全球大危机的比较研究》",
+      //       link: "/economy/book/两次全球大危机的比较研究/",
+      //     },
+      //   ],
+      // },
     ],
   },
 ];
