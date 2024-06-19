@@ -1,15 +1,16 @@
 # 练习
 
-## 马士兵2023版Java
+## 老马书城
 
-### 老马书城1.0：集合版
+马士兵
+
+### 集合版
 
 ![alt text](img/image-17.png)
 
 #### 菜单管理
 
 相关类：Scanner
-
 
 ```java
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class Main {
             2. 获取用户输入
             int choice = scanner.nextInt();
             System.out.println(choice);
-            
+
             3. 判断用户输入
             if (choice == 1){
                 System.out.println("展示书籍");
@@ -57,7 +58,8 @@ public class Main {
 - 书籍名称
 - 书籍作者
 
-book类
+book 类
+
 ```java
 public class Book {
     private int id;         // 书籍编号
@@ -179,7 +181,6 @@ public class Main {
 
 #### 下架书籍
 
-
 #### 完整代码
 
 ```java
@@ -251,12 +252,12 @@ public class Main {
 ```
 
 #### 代码优化
+
 - Scanner 对象的关闭：最好在循环外创建一个 Scanner 对象，并在循环结束时关闭它，以避免重复创建和销毁多个 Scanner 对象。
 
 - 使用 switch 替代多个 if：对于选择操作的判断，使用 switch 语句会使代码更清晰易读。
 
 - 下架书籍功能的改进：在删除书籍时，直接使用 ArrayList 的 removeIf 方法会更简洁高效。
-
 
 ```java
 import java.util.ArrayList;
@@ -340,3 +341,7 @@ public class Main {
 ### IO 流版
 
 ![alt text](img/image-27.png)
+
+### 数据库版
+
+![alt text](img/image-41.png)
