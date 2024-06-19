@@ -94,6 +94,13 @@ export default [
       { text: "工具", link: "/RD/tools/" },
       { text: "常见需求", link: "/RD/business/" },
       {
+        text: "爬虫",
+        items: [
+          { text: "爬虫", link: "/RD/spider/" },
+          { text: "Windows", link: "/RD/windows/" },
+        ],
+      },
+      {
         text: "操作系统",
         items: [
           { text: "Linux", link: "/RD/linux/" },

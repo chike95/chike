@@ -14,9 +14,7 @@ export default {
     {
       text: "计算机科学",
       //   collapsed: true,
-      items: [
-        { text: "导论", link: "/iot/computer/philosophy/" },
-      ],
+      items: [{ text: "导论", link: "/iot/computer/philosophy/" }],
     },
     {
       text: "组成原理",
@@ -320,6 +318,7 @@ export default {
         { text: "TCP", link: "/RD/node/core/tcp" },
       ],
     },
+    { text: "爬虫", link: "/RD/node/spider/" },
     {
       text: "常用库",
       collapsed: false,
