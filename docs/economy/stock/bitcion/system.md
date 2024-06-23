@@ -22,3 +22,19 @@
 ## 三、风险控制
 
 ## 四、资金管理
+
+## 五、市场测试
+
+### 20240619-
+
+#### 4H
+
+![alt text](img/image-1.png)
+
+#### 15M转跌
+
+![alt text](img/image-3.png)
+
+子周期
+
+![alt text](img/image-4.png)

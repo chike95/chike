@@ -463,7 +463,7 @@ export default {
     },
   ],
 
-  "/RD/javagrammar/": [
+  "/RD/java/grammar/": [
     { text: "基础语法", link: "/RD/java/grammar/" },
     { text: "IDEA", link: "/RD/java/idea/" },
     {
@@ -508,6 +508,17 @@ export default {
           link: "/RD/java/spring/wiki/06-libraries",
         },
       ],
+    },
+  ],
+
+  "/RD/python/": [
+    { text: "python", link: "/RD/python/" },
+    { text: "基础语法", link: "/RD/python/grammar/" },
+    { text: "pycharm", link: "/RD/python/pycharm/" },
+    {
+      text: "框架",
+      collapsed: false,
+      items: [{ text: "Express", link: "/RD/node/express/" }],
     },
   ],
 
@@ -723,7 +734,13 @@ export default {
       text: "项目开发",
       collapsed: false,
       items: [
-        { text: "架构设计", link: "/practice/zhenpath/project/framework" },
+        {
+          text: "架构设计",
+          items: [
+            { text: "数据库架构", link: "/practice/zhenpath/backend/database" },
+          ],
+        },
+
         { text: "环境准备", link: "/practice/zhenpath/project/setup" },
         { text: "项目部署", link: "/practice/zhenpath/project/deploy" },
       ],

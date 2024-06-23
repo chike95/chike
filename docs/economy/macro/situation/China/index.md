@@ -56,5 +56,16 @@
 
 
 
+## 注意事项
 
+![alt text](img/image-20.png)
 
+![alt text](img/image-21.png)
+
+1：描述需求曲线的变换
+
+2：描述同一需求曲线下的价格变化（需求：需求量）
+
+![alt text](img/image-22.png)
+
+![alt text](img/image-23.png)

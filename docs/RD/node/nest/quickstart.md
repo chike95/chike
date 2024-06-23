@@ -18,7 +18,9 @@ npm i
 "start:debug": "nest start --debug --watch",
 "start:prod": "node dist/main",
 ```
-
+::: warning 换行报错
+解决办法: <https://blog.csdn.net/m0_61227486/article/details/135059107>
+:::
 ## 目录结构
 
 ### main.ts
