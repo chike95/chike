@@ -2,6 +2,10 @@
 
 排行榜：<https://www.tiobe.com/tiobe-index/>
 
+## 仓颉编程语言
+
+文档：<https://developer.huawei.com/consumer/cn/doc/openharmony-cangjie/cj-wp-abstract>
+
 ## 编程范式
 
 ### 面向对象编程

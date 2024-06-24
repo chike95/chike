@@ -1,6 +1,28 @@
-# spring boot
+# spring
 
 ![alt text](img/image.png)
+
+![alt text](img/image-27.png)
+
+官网：<https://spring.io/>
+
+![alt text](img/image-28.png)
+
+## 编程哲学
+
+### 控制反转
+
+![alt text](img/image-29.png)
+
+### 分层思想
+
+![alt text](img/image-31.png)
+
+### 面向接口
+
+![alt text](img/image-32.png)
+
+## SpringBoot
 
 #### SpringBoot 特点
 
@@ -11,7 +33,6 @@
 定制化启动器 Starters，简化 maven 配置
 
 提供生产级服务监控方案
-
 
 ### 过滤器 filter
 

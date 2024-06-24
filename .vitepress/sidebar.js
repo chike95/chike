@@ -450,7 +450,7 @@ export default {
     { text: "开发提效", link: "/RD/java/development/" },
     { text: "项目实践", link: "/RD/java/grammar/practice" },
 
-    { text: "MyBatis", link: "/RD/java/OO/" },
+    { text: "MyBatis", link: "/RD/java/development/mybatis" },
     { text: "IDEA", link: "/RD/java/idea/" },
     {
       text: "框架",
