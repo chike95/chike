@@ -1,4 +1,4 @@
-# 类型
+# 日常类型
 
 ## 类型定义
 
@@ -39,6 +39,28 @@ function sum(a: number, b: number) {
 
 console.log(sum("a", 3));
 //报错 Argument of type 'string' is not assignable to parameter of type 'number'.
+```
+
+### 类型别名
+
+目的：实现复用
+
+```ts
+type User = {
+  name: string;
+  age: number;
+};
+
+const user2: User = {
+  name: "张三",
+  age: 30,
+};
+
+const user3: User = {
+  name: "李四",
+  age: 20,
+};
+
 ```
 
 ### 类型推断
@@ -131,6 +153,79 @@ function voidFn(): void {
 
 与 void 的区别是，undefined 和 null 是所有类型的子类型。也就是说 undefined 类型的变量，可以赋值给 string 类型的变量：
 
+### never
+
+never 表示的是那些永不存在的值的类型。
+
+```ts
+// 返回never的函数必须存在无法达到的终点
+function error(message: string): never {
+  throw new Error(message);
+}
+```
+
+
+## 数组类型
+```ts
+const numberArr: number[] = [1, 2, 3];
+const stringArr: string[] = ["1", "2", "3"];
+const booleanArr: boolean[] = [true, false, true];
+const booleanArr2: Array<boolean> = [true, false, true];
+```
+
+## 对象类型
+
+```ts
+const user: {
+  name: string;
+  age: number;
+  isMale?: boolean;
+} = {
+  name: "张三",
+  age: 30,
+  isMale: true,
+};
+```
+
+## 联合类型
+
+```ts
+function union(id: number | string) {
+  console.log(id);
+}
+```
+![alt text](img/image-4.png)
+
+类型收窄
+```ts
+function union(id: number | string) {  // 类型收窄 Narrowing
+  if (typeof id === "string") {
+    console.log(id.toUpperCase());
+  } else {
+    console.log(id);
+  }
+}
+```
+
+## any
+
+当你不希望某个特定的值导致类型检查错误时，你可以使用它。
+
+当一个值的类型为 any 时，你可以访问它的任何属性（这又将是 any 类型），像函数一样调用它，将它分配给（或从）任何类型的值，或者几乎任何其他东西这在语法上是合法的：
+
+```ts
+function anyFunction(arg: any) {
+  console.log(arg);
+}
+```
+
+禁止不明确的any
+
+![alt text](img/image-7.png)
+
+![alt text](img/image-6.png)
+
+
 ### any / unknown
 
 any 表示任意类型，unknown 表示未知类型
@@ -146,7 +241,7 @@ b = "abc";
 ```
 
 any 与 unknown 的区别？
-（）
+（1）类型检查
 （2）属性方法的调用
 
 ```ts
@@ -160,37 +255,41 @@ obj.b;
 obj.ccc();
 ```
 
-### never
-
-never 表示的是那些永不存在的值的类型。
-
-```ts
-// 返回never的函数必须存在无法达到的终点
-function error(message: string): never {
-  throw new Error(message);
-}
-```
-
-### symbol
-
-## 引用类型
-
-### {} or object
-
-```ts
-let obj: {} = {};
-let obj2: object = {};
-let obj3: object = { a: 1 };
-```
-
-Object vs {} vs object
-
-### [] or Array
 
 ## 函数类型
 
-### function
+返回值定义
 
-### class
+```ts
+function add(x: number, y: number): number {
+  return x + y;
+}
 
-## 联合类型
+// 其它方式
+const def: (age: number) => number = (age: number) => {
+  return age;
+}
+
+```
+
+
+
+可选参数
+
+```ts
+function add(x: number, y?: number): number {
+  if (y) {
+    return x + y;
+  } else {
+    return x;
+  }
+}
+```
+
+默认参数
+
+```ts
+function add(x: number, y = 10): number {
+  
+}
+```
