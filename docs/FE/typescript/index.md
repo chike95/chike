@@ -2,6 +2,8 @@
 
 官网：<https://www.typescriptlang.org/>
 
+中文文档：<https://ts.nodejs.cn/docs/handbook/intro.html>
+
 在线调试：<https://www.typescriptlang.org/zh/play?#code/Q>
 
 小满 TS：<https://www.bilibili.com/video/BV1wR4y1377K/>
