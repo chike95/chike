@@ -236,7 +236,7 @@ export default {
       // collapsed: true,
       items: [
         { text: "核心知识", link: "/FE/VUE/vben/" },
-        { text: "基础知识", link: "" },
+        { text: "初始化", link: "/FE/VUE/vben/init" },
       ],
     },
   ],

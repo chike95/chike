@@ -6,7 +6,7 @@ javascript 本身提供类型支持，但有以下几个问题：
 
 - js 是弱类型，类型可以根据值发生改变
 
-- 使用 js 不能自定义类型，比如下面的 name 我们想只允许是 lxm yefenglin 值，但实际上是可以传递任何值的。
+- 使用 js 不能自定义类型，比如 name 我们想只允许是 lxm yefenglin 值，但实际上是可以传递任何值的。
 
 而在 typescript 中，可以将类型理解为一类值的集合，比如 'lxm'、'夜枫林'都属于 string 类型集合。
 
@@ -60,7 +60,6 @@ const user3: User = {
   name: "李四",
   age: 20,
 };
-
 ```
 
 ### 类型推断
@@ -164,8 +163,8 @@ function error(message: string): never {
 }
 ```
 
-
 ## 数组类型
+
 ```ts
 const numberArr: number[] = [1, 2, 3];
 const stringArr: string[] = ["1", "2", "3"];
@@ -194,11 +193,14 @@ function union(id: number | string) {
   console.log(id);
 }
 ```
+
 ![alt text](img/image-4.png)
 
 类型收窄
+
 ```ts
-function union(id: number | string) {  // 类型收窄 Narrowing
+function union(id: number | string) {
+  // 类型收窄 Narrowing
   if (typeof id === "string") {
     console.log(id.toUpperCase());
   } else {
@@ -219,12 +221,11 @@ function anyFunction(arg: any) {
 }
 ```
 
-禁止不明确的any
+禁止不明确的 any
 
 ![alt text](img/image-7.png)
 
 ![alt text](img/image-6.png)
-
 
 ### any / unknown
 
@@ -255,7 +256,6 @@ obj.b;
 obj.ccc();
 ```
 
-
 ## 函数类型
 
 返回值定义
@@ -268,11 +268,8 @@ function add(x: number, y: number): number {
 // 其它方式
 const def: (age: number) => number = (age: number) => {
   return age;
-}
-
+};
 ```
-
-
 
 可选参数
 
@@ -289,7 +286,5 @@ function add(x: number, y?: number): number {
 默认参数
 
 ```ts
-function add(x: number, y = 10): number {
-  
-}
+function add(x: number, y = 10): number {}
 ```
