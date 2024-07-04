@@ -10,6 +10,8 @@ javascript 本身提供类型支持，但有以下几个问题：
 
 而在 typescript 中，可以将类型理解为一类值的集合，比如 'lxm'、'夜枫林'都属于 string 类型集合。
 
+
+
 ### 类型注解
 
 ```js
@@ -17,6 +19,16 @@ let str: string;
 
 str = "abc";
 ```
+### 类型推断
+
+当没有明确设置类型时，系统会根据初值推断变量的类型
+
+![alt text](../img/leixingtuiduan.png)
+
+### 类型准则
+
+- 只要有变量或者对象属性，都应该有一个明确的类型
+- 如果类型推断能够自动推断出类型，就没必要手写类型注解
 
 ### 类型校验
 
@@ -62,11 +74,6 @@ const user3: User = {
 };
 ```
 
-### 类型推断
-
-当没有明确设置类型时，系统会根据初值推断变量的类型
-
-![alt text](../img/leixingtuiduan.png)
 
 ### 类型等级
 
@@ -288,3 +295,87 @@ function add(x: number, y?: number): number {
 ```ts
 function add(x: number, y = 10): number {}
 ```
+
+
+## 接口类型
+
+```ts
+interface Student {
+    age: number;
+    sex?: string;
+}
+
+const student: Student = {
+    age: 18,
+    sex: "男",
+}
+```
+
+### 接口 与 类型别名 的区别
+
+- 接口优先
+
+- 接口可以直接扩展（extends或者重复定义扩展），类型别名不行
+- 
+```ts
+interface Student {
+  age: number;
+  sex?: string;
+}
+interface Student {
+    name: string;
+}
+
+interface OldStudent extends Student {
+    age: number;
+}
+  
+const student: Student = {
+  name: "张三",
+  age: 18,
+  sex: "男",
+};
+```
+
+## 交叉类型
+
+```ts
+type Employee = User &{salary: number}
+
+const employee: Employee = {
+    name : "张三",
+    age: 30,
+    salary : 10000
+}
+```
+
+## 断言
+```ts
+// dom 可能是 undefined 或者 HTMLElement 类型，取消类型推断，定义类型为 HTMLElement
+const dom: HTMLElement = document.getElementById("app") as HTMLDivElement;
+```
+
+## 字面类型
+
+除了通用类型 string 和 number 之外，我们还可以在类型位置引用特定的字符串和数字。
+
+```ts
+let x: "hello" = "hello";
+```
+
+变量只能有一个值并没有多大用处！
+
+但是通过将字面量组合成联合，你可以表达更有用的概念 - 例如，仅接受一组特定已知值的函数：
+
+```ts
+function printText(s: string, alignment: "left" | "right" | "center") {
+  // ...
+}
+printText("Hello, world", "left");
+printText("G'day, mate", "centre");
+```
+
+### 字面推断
+
+
+
