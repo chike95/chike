@@ -421,3 +421,247 @@ export enum RoleEnum {
 ```
 
 （二）src\utils\auth 权限缓存方法
+
+接下会使用权限缓存方法 getAuthCache、setAuthCache,用于获取和设置权限缓存。默认存放于 localStorage 。
+
+```ts
+// src\utils\auth\index.ts
+const { permissionCacheType } = projectSetting;
+const isLocal = permissionCacheType === CacheTypeEnum.LOCAL;
+
+export function getAuthCache<T>(key: BasicKeys) {
+  const fn = isLocal ? Persistent.getLocal : Persistent.getSession;
+  return fn(key) as T;
+}
+
+export function setAuthCache(key: BasicKeys, value) {
+  const fn = isLocal ? Persistent.setLocal : Persistent.setSession;
+  return fn(key, value, true);
+}
+```
+
+缓存方式支持 localStorage 和 sessionStorage,在 src/settings/projectSetting.ts 进行设置， 改动后需要清空浏览器缓存后生效。
+
+```ts
+// src/settings/projectSetting.ts
+const setting: ProjectConfig = {
+  // 权限缓存存放位置。默认存放于 localStorage
+  permissionCacheType: CacheTypeEnum.LOCAL,
+};
+// src\enums\cacheEnum.ts
+export enum CacheTypeEnum {
+  SESSION,
+  LOCAL,
+}
+```
+
+（三）getter
+
+从状态中获取用户信息、token、角色列表、登录是否超期失效、最后更新时间，若用户信息、token、角色列表为空，则从缓存中获取值。
+
+```ts
+getters: {
+  getUserInfo(): UserInfo {
+    return this.userInfo || getAuthCache<UserInfo>(USER_INFO_KEY) || {};
+  },
+  getToken(): string {
+    return this.token || getAuthCache<string>(TOKEN_KEY);
+  },
+  getRoleList(): RoleEnum[] {
+    return this.roleList.length > 0 ? this.roleList : getAuthCache<RoleEnum[]>(ROLES_KEY);
+  },
+  getSessionTimeout(): boolean {
+    return !!this.sessionTimeout;
+  },
+  getLastUpdateTime(): number {
+    return this.lastUpdateTime;
+  },
+},
+
+```
+
+（四）actions
+
+更新用户信息、token、角色列表等，同时使用 setAuthCache 进行缓存。
+
+```ts
+setToken(info: string | undefined) {
+  this.token = info ? info : '';
+  setAuthCache(TOKEN_KEY, info);
+},
+setRoleList(roleList: RoleEnum[]) {
+  this.roleList = roleList;
+  setAuthCache(ROLES_KEY, roleList);
+},
+setUserInfo(info: UserInfo | null) {
+  this.userInfo = info;
+  this.lastUpdateTime = new Date().getTime();
+  setAuthCache(USER_INFO_KEY, info);
+},
+
+```
+
+setSessionTimeout 方法设置用户登录状态。
+
+```ts
+setSessionTimeout(flag: boolean) {
+  this.sessionTimeout = flag;
+},
+
+```
+
+resetState 方法清空重置用户登录状态。
+
+```TypeScript
+resetState() {
+  this.userInfo = null;
+  this.token = '';
+  this.roleList = [];
+  this.sessionTimeout = false;
+},
+
+```
+
+（五）用户登录
+
+login() 方法用于用户登录后获取用户信息，返回一个 Promise 对象。
+
+- 调用了 loginApi，此服务接口为数据 mock&联调，根据项目自行替换真实服务。
+- 获取 token 后调用 setToken 更新状态。
+- 调用 afterLoginAction 方法进行登录后预处理操作。
+
+```ts
+async login(
+  params: LoginParams & {
+    goHome?: boolean;
+    mode?: ErrorMessageMode;
+  },
+): Promise<GetUserInfoModel | null> {
+  try {
+    const { goHome = true, mode, ...loginParams } = params;
+    const data = await loginApi(loginParams, mode);
+    const { token } = data;
+
+    // save token
+    this.setToken(token);
+    return this.afterLoginAction(goHome);
+  } catch (error) {
+    return Promise.reject(error);
+  }
+},
+
+```
+
+afterLoginAction 方法用于用户登录后，进行角色、权限、菜单、路由等配置操作。
+
+（1）调用 getUserInfoAction 获取登录用户信息，
+
+- 调用 mock 服务 getUserInfo()，
+- 根据返回用户登录信息，设置角色列表，
+- 更新状态对象值。
+
+（2）调用权限存储构建路由列表（详细逻辑稍后文章会详细讲解）。
+
+- 若是路由还没态添加过，调用 buildRoutesAction()方法， 根据不同的权限处理方式构建路由列表
+- 根据用户指定不同的后台首页进行跳转。
+
+```ts
+async afterLoginAction(goHome?: boolean): Promise<GetUserInfoModel | null> {
+  if (!this.getToken) return null;
+  // get user info
+  const userInfo = await this.getUserInfoAction();
+
+  ...
+
+    const permissionStore = usePermissionStore();
+    if (!permissionStore.isDynamicAddedRoute) {
+      const routes = await permissionStore.buildRoutesAction();
+      routes.forEach((route) => {
+        router.addRoute(route as unknown as RouteRecordRaw);
+      });
+      router.addRoute(PAGE_NOT_FOUND_ROUTE as unknown as RouteRecordRaw);
+      permissionStore.setDynamicAddedRoute(true);
+    }
+    goHome && (await router.replace(userInfo?.homePath || PageEnum.BASE_HOME));
+
+  ...
+
+  return userInfo;
+},
+async getUserInfoAction(): Promise<UserInfo | null> {
+  if (!this.getToken) return null;
+  const userInfo = await getUserInfo();
+  const { roles = [] } = userInfo;
+  if (isArray(roles)) {
+    const roleList = roles.map((item) => item.value) as RoleEnum[];
+    this.setRoleList(roleList);
+  } else {
+    userInfo.roles = [];
+    this.setRoleList([]);
+  }
+  this.setUserInfo(userInfo);
+  return userInfo;
+},
+
+```
+
+登录页面中调用 userStore.login() 方法进行系统登录操作。
+
+```ts
+// src\views\sys\login\LoginForm.vue
+
+const userInfo = await userStore.login({
+  password: data.password,
+  username: data.account,
+  mode: "none", //不要默认的错误提示
+});
+if (userInfo) {
+  notification.success({
+    message: t("sys.login.loginSuccessTitle"),
+    description: `${t("sys.login.loginSuccessDesc")}: ${userInfo.realName}`,
+    duration: 3,
+  });
+}
+```
+
+（六）用户注销
+
+logout 注销方法调用 mock 服务 doLogout() ,同时清空 token 和用户信息，设置用户登录状态失效，然后跳转系统登录界面。
+
+```ts
+// 用户注销
+async logout(goLogin = false) {
+ if (this.getToken) {
+   try {
+     await doLogout();
+   } catch {
+     console.log('注销Token失败');
+   }
+ }
+ this.setToken(undefined);
+ this.setSessionTimeout(false);
+ this.setUserInfo(null);
+ goLogin && router.push(PageEnum.BASE_LOGIN);
+},
+```
+
+confirmLoginOut() 会弹出系统确认框,确认后调用 logout 方法。
+
+```ts
+// 退出系统确认框
+confirmLoginOut() {
+  const { createConfirm } = useMessage();
+  const { t } = useI18n();
+  createConfirm({
+    iconType: 'warning',
+    title: () => h('span', t('sys.app.logoutTip')),
+    content: () => h('span', t('sys.app.logoutMessage')),
+    onOk: async () => {
+      await this.logout(true);
+    },
+  });
+},
+
+```
+
+![alt text](img/image-12.png)
