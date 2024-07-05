@@ -231,12 +231,25 @@ export default {
         { text: "基础知识", link: "/FE/VUE/vite/" },
       ],
     },
+    { text: "Vben Admin", link: "/FE/VUE/vben/" },
+  ],
+
+  "/FE/VUE/vben/": [
     {
-      text: "Vben Admin",
+      text: "Vben Admin 指南",
       // collapsed: true,
       items: [
-        { text: "核心知识", link: "/FE/VUE/vben/" },
+        { text: "介绍", link: "/FE/VUE/vben/" },
         { text: "初始化", link: "/FE/VUE/vben/init" },
+        { text: "项目配置", link: "/FE/VUE/vben/settings" },
+        { text: "角色权限", link: "/FE/VUE/vben/auth" },
+      ],
+    },
+    {
+      text: "模块",
+      collapsed: false,
+      items: [
+        { text: "状态管理", link: "/FE/VUE/vben/store" },
       ],
     },
   ],

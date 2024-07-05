@@ -102,6 +102,14 @@ export { store };
 
 ### 项目配置：app.ts
 
+::: info 主要内容
+
+- data
+- getter
+- action
+- 其它
+  :::
+
 文件 src\store\modules\app.ts 声明导出一个 store 实例 useAppStore 、一个方法 useAppStoreWithOut()用于没有使用 setup 组件时使用。
 
 ```ts
@@ -119,7 +127,7 @@ export function useAppStoreWithOut() {
 
 ```
 
-#### data
+(一) data
 
 状态对象定义了主题模式、页面加载状态、项目配置、菜单状态快照等。
 
@@ -146,7 +154,7 @@ export interface BeforeMiniState {
 }
 ```
 
-#### Getter
+(二) Getter
 
 Getter 等同于 Store 状态的计算值(计算属性)。
 
@@ -195,7 +203,7 @@ getters: {
 export const darkMode = ThemeEnum.LIGHT;
 ```
 
-#### Actions
+(三) Actions
 
 Actions 相当于组件中的 methods，主要用于设置 state 对象。
 
@@ -241,7 +249,7 @@ actions: {
 
 ```
 
-#### 其它
+（四） 其它
 
 在缓存、localStorage 操作中使用了存储 KEY，它定义在 src\enums\cacheEnum.ts 文件中。
 
