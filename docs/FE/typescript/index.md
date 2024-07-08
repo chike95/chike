@@ -1,5 +1,7 @@
 # TypeScript
 
+![alt text](img/image-3.png)
+
 官网：<https://www.typescriptlang.org/>
 
 中文文档：<https://ts.nodejs.cn/docs/handbook/intro.html>
@@ -11,8 +13,6 @@
 小满笔记：<https://blog.csdn.net/qq1195566313/category_11559497.html>
 
 大前端笔记：<https://front-end.toimc.com/notes-page/basic/ts/>
-
-
 
 ## 什么是 TypeScript
 
@@ -31,7 +31,6 @@ TypeScript 提供最新的和不断发展的 JavaScript 特性，包括那些来
 - 类型检测 利于团队协助
 
 - 动态输入 自动推导 利于 IDE 提升开发效率
-
 
 ### JS 缺陷：隐性的类型转换
 
@@ -54,6 +53,7 @@ if (1 < x < 3) {
 ```
 
 ### JS 缺陷：允许访问不存在的属性
+
 ```js
 const obj = { width: 10, height: 15 };
 // Why is this NaN? Spelling is hard!
@@ -84,18 +84,9 @@ function getDistance(point1: Point, point2: Point) {
 }
 
 getDistance({ x: "23", y: 2 }, { x: 4, y: 6 });
-
 ```
 
 ![alt text](img/image-1.png)
-
-### TS 运行机制
-
-ts 代码默认在v8引擎（浏览器和node）中是无法直接执行的，需要先编译成 js
-
-```bash
- tsc ./02/2-4.ts
-```
 
 ### TS 静态类型校验能力
 
@@ -107,14 +98,9 @@ Static Type Checking
 
 实现方式是：类型（校验）
 
-JS + 类型 -> Static Checking(vscode的js静态类型校验能力) -> 代码错误预警
-
+JS + 类型 -> Static Checking(vscode 的 js 静态类型校验能力) -> 代码错误预警
 
 所以，TS 要学习的核心就是：JS + 类型
-
-
-
-
 
 ## 快速入门
 
@@ -329,4 +315,3 @@ let obj: MyInterface2 = {
 ```js
 
 ```
-
