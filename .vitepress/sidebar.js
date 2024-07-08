@@ -214,6 +214,7 @@ export default {
       // collapsed: true,
       items: [
         { text: "VUE 简介", link: "/FE/VUE/" },
+        { text: "核心思想", link: "/FE/VUE/thought" },
         { text: "混沌领域", link: "/FE/VUE/core/chaos" },
       ],
     },
@@ -250,9 +251,7 @@ export default {
     {
       text: "模块",
       collapsed: false,
-      items: [
-        { text: "状态管理", link: "/FE/VUE/vben/store" },
-      ],
+      items: [{ text: "状态管理", link: "/FE/VUE/vben/store" }],
     },
   ],
 
@@ -750,6 +749,7 @@ export default {
       text: "项目开发",
       collapsed: false,
       items: [
+        { text: "开发日志", link: "/practice/zhenpath/project/logs" },
         {
           text: "架构设计",
           items: [
