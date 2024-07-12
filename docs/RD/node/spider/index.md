@@ -28,27 +28,25 @@ let req = https.request("https://www.528btc.com/coin/3007.html", (res) => {
 
 // 3.发送请求
 req.end();
-
 ```
 
 ### Cheerio
 
 npm 地址：<https://www.npmjs.com/package/cheerio>
+
 Cheerio 是一个类似 jQuery 的库，用于在服务器端解析 HTML 和操作 DOM。适用于构建简单的网络爬虫和数据抓取工具。
 
 ```js
-const cheerio = require('cheerio');
+const cheerio = require("cheerio");
 const $ = cheerio.load('<h2 class="title">Hello world</h2>');
 
-$('h2.title').text('Hello there!');
-$('h2').addClass('welcome');
+$("h2.title").text("Hello there!");
+$("h2").addClass("welcome");
 
 $.html();
 //=> <html><head></head><body><h2 class="title welcome">Hello there!</h2></body></html>
 ```
 
-
 ### Download
-
 
 ### Selenium

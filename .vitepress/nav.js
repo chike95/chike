@@ -150,6 +150,7 @@ export default [
       },
       { text: "道学", link: "/thought/world/" },
       { text: "真途", link: "/practice/zhenpath/" },
+      { text: "一为主题", link: "/practice/iowen/" },
       { text: "图书管理", link: "/practice/BookManage/" },
     ],
   },

@@ -731,6 +731,26 @@ export default {
     },
   ],
 
+  "/practice/iowen/": [
+    {
+      text: "一为主题",
+      collapsed: false,
+      items: [
+        { text: "混沌领域", link: "/practice/zhenpath/chaos.md" },
+        { text: "需求分析", link: "/practice/zhenpath/requirement.md" },
+        { text: "社区管理", link: "/practice/zhenpath/manage.md" },
+      ],
+    },
+    {
+      text: "爬虫开发",
+      collapsed: false,
+      items: [
+        { text: "项目规划", link: "/practice/iowen/spider/requirement" },
+        { text: "内容爬取", link: "/practice/iowen/spider/content" },
+      ],
+    },
+  ],
+
   "/practice/zhenpath/": [
     {
       text: "实践·真途",
